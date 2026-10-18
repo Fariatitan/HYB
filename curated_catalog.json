@@ -744,22 +744,6 @@
     },
     {
       "id": "acervo_materico_005",
-      "name": "006_DALLIDO_1988_A_DANCA_BEHANCE.jpg",
-      "path": "assets/acervo_materico/006_DALLIDO_1988_A_DANCA_BEHANCE.jpg",
-      "url": "assets/acervo_materico/006_DALLIDO_1988_A_DANCA_BEHANCE.jpg",
-      "w": 1920,
-      "h": 9506,
-      "ratio": 0.202,
-      "orient": "strip",
-      "category": "acervo_materico",
-      "subfolder": "acervo_materico",
-      "series": "ATO 04 // ACERVO MATÉRICO & SÉRIES AUTORAIS",
-      "title": "DOSSIÊ COMPLETO BEHANCE — SÉRIE A DANÇA",
-      "caption": "Prancha contínua apresentando a narrativa curatorial e os detalhes de impasto da série A Dança.",
-      "aspect_badge": "PRANCHA CONTÍNUA"
-    },
-    {
-      "id": "acervo_materico_006",
       "name": "007_L1010570.jpg",
       "path": "assets/acervo_materico/007_L1010570.jpg",
       "url": "assets/acervo_materico/007_L1010570.jpg",
@@ -775,7 +759,7 @@
       "aspect_badge": "16:9 PANORÂMICO"
     },
     {
-      "id": "acervo_materico_007",
+      "id": "acervo_materico_006",
       "name": "008_L1010571.jpg",
       "path": "assets/acervo_materico/008_L1010571.jpg",
       "url": "assets/acervo_materico/008_L1010571.jpg",
@@ -791,7 +775,7 @@
       "aspect_badge": "16:9 PANORÂMICO"
     },
     {
-      "id": "acervo_materico_008",
+      "id": "acervo_materico_007",
       "name": "009_L1010576.jpg",
       "path": "assets/acervo_materico/009_L1010576.jpg",
       "url": "assets/acervo_materico/009_L1010576.jpg",
@@ -807,7 +791,7 @@
       "aspect_badge": "16:9 PANORÂMICO"
     },
     {
-      "id": "acervo_materico_009",
+      "id": "acervo_materico_008",
       "name": "010_ChatGPT_Image_28_de_set._de_2026_23_42_26.png",
       "path": "assets/acervo_materico/010_ChatGPT_Image_28_de_set._de_2026_23_42_26.png",
       "url": "assets/acervo_materico/010_ChatGPT_Image_28_de_set._de_2026_23_42_26.png",
@@ -823,7 +807,7 @@
       "aspect_badge": "4:3 HORIZONTAL"
     },
     {
-      "id": "acervo_materico_010",
+      "id": "acervo_materico_009",
       "name": "011_ChatGPT_Image_28_de_set._de_2026_23_46_32.png",
       "path": "assets/acervo_materico/011_ChatGPT_Image_28_de_set._de_2026_23_46_32.png",
       "url": "assets/acervo_materico/011_ChatGPT_Image_28_de_set._de_2026_23_46_32.png",
@@ -839,7 +823,7 @@
       "aspect_badge": "4:3 HORIZONTAL"
     },
     {
-      "id": "acervo_materico_011",
+      "id": "acervo_materico_010",
       "name": "012_ChatGPT_Image_28_de_set._de_2026_23_50_21.png",
       "path": "assets/acervo_materico/012_ChatGPT_Image_28_de_set._de_2026_23_50_21.png",
       "url": "assets/acervo_materico/012_ChatGPT_Image_28_de_set._de_2026_23_50_21.png",
@@ -855,7 +839,7 @@
       "aspect_badge": "1:1 QUADRADO"
     },
     {
-      "id": "acervo_materico_012",
+      "id": "acervo_materico_011",
       "name": "013_ChatGPT_Image_29_de_set._de_2026_00_35_41.png",
       "path": "assets/acervo_materico/013_ChatGPT_Image_29_de_set._de_2026_00_35_41.png",
       "url": "assets/acervo_materico/013_ChatGPT_Image_29_de_set._de_2026_00_35_41.png",
@@ -871,7 +855,7 @@
       "aspect_badge": "3:4 RETRATO"
     },
     {
-      "id": "acervo_materico_013",
+      "id": "acervo_materico_012",
       "name": "014_DALLIDO_1988_A_PISTA_BEHANCE.jpg",
       "path": "assets/acervo_materico/014_DALLIDO_1988_A_PISTA_BEHANCE.jpg",
       "url": "assets/acervo_materico/014_DALLIDO_1988_A_PISTA_BEHANCE.jpg",
@@ -887,7 +871,7 @@
       "aspect_badge": "PRANCHA CONTÍNUA"
     },
     {
-      "id": "acervo_materico_014",
+      "id": "acervo_materico_013",
       "name": "015_L1010595.jpg",
       "path": "assets/acervo_materico/015_L1010595.jpg",
       "url": "assets/acervo_materico/015_L1010595.jpg",
@@ -903,7 +887,7 @@
       "aspect_badge": "4:3 HORIZONTAL"
     },
     {
-      "id": "acervo_materico_015",
+      "id": "acervo_materico_014",
       "name": "016_espectro-ig-1080x1440_5.png",
       "path": "assets/acervo_materico/016_espectro-ig-1080x1440_5.png",
       "url": "assets/acervo_materico/016_espectro-ig-1080x1440_5.png",
@@ -919,7 +903,7 @@
       "aspect_badge": "3:4 RETRATO"
     },
     {
-      "id": "acervo_materico_016",
+      "id": "acervo_materico_015",
       "name": "017_mockup-canvas-preto.jpg",
       "path": "assets/acervo_materico/017_mockup-canvas-preto.jpg",
       "url": "assets/acervo_materico/017_mockup-canvas-preto.jpg",
@@ -935,7 +919,7 @@
       "aspect_badge": "3:4 RETRATO"
     },
     {
-      "id": "acervo_materico_017",
+      "id": "acervo_materico_016",
       "name": "021_ChatGPT_Image_21_de_set._de_2026_08_03_09.png",
       "path": "assets/acervo_materico/021_ChatGPT_Image_21_de_set._de_2026_08_03_09.png",
       "url": "assets/acervo_materico/021_ChatGPT_Image_21_de_set._de_2026_08_03_09.png",
@@ -951,7 +935,7 @@
       "aspect_badge": "1:1 QUADRADO"
     },
     {
-      "id": "acervo_materico_018",
+      "id": "acervo_materico_017",
       "name": "022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
       "path": "assets/acervo_materico/022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
       "url": "assets/acervo_materico/022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
@@ -967,7 +951,7 @@
       "aspect_badge": "FORMATO NATIVO"
     },
     {
-      "id": "acervo_materico_019",
+      "id": "acervo_materico_018",
       "name": "023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
       "path": "assets/acervo_materico/023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
       "url": "assets/acervo_materico/023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
@@ -983,7 +967,7 @@
       "aspect_badge": "9:16 VERTICAL"
     },
     {
-      "id": "acervo_materico_020",
+      "id": "acervo_materico_019",
       "name": "024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
       "path": "assets/acervo_materico/024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
       "url": "assets/acervo_materico/024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
