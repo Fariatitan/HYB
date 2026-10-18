@@ -174,34 +174,15 @@
       .topbar .avail { display: none; }
     }
 
-    .rail {
-      position: fixed;
-      top: 50%;
-      z-index: 40;
-      pointer-events: none;
-    }
-    .rail--l {
-      left: calc(var(--pad) - 22px);
-      transform: translateY(-50%) rotate(180deg);
-    }
-    .rail--r {
-      right: calc(var(--pad) - 22px);
-      transform: translateY(-50%);
-    }
-    .rail span {
-      writing-mode: vertical-rl;
-      letter-spacing: 0.3em;
-    }
-    .edge {
+    .edge--l {
       position: fixed;
       bottom: 16px;
+      left: var(--pad);
       z-index: 50;
       pointer-events: none;
     }
-    .edge--l { left: var(--pad); }
-    .edge--r { right: var(--pad); }
     @media (max-width: 900px) {
-      .rail, .edge { display: none; }
+      .edge--l { display: none; }
     }
 
     /* Custom Floating Magnetic Cursor */
@@ -317,8 +298,8 @@
     .title {
       margin: 0;
       padding-top: 0.08em;
-      padding-bottom: 0.18em;
-      font-size: clamp(36px, 8.6vw, 158px);
+      padding-bottom: 0.16em;
+      font-size: clamp(32px, 7.2vw, 132px);
       line-height: 0.94;
       font-weight: 300;
       letter-spacing: -0.03em;
@@ -410,44 +391,67 @@
       .manifesto__lead { margin-top: 22px; }
     }
 
-    /* ---------- 03. INDEX DE ESCOPOS (prototipo-editorial.html) ---------- */
+    /* ---------- 03. INDEX DE ESCOPOS (Arquitetura Comercial de Alto Padrão) ---------- */
     .index {
-      padding-top: clamp(90px, 20vh, 240px);
+      padding-top: clamp(80px, 18vh, 220px);
     }
     .rows {
-      margin-top: clamp(30px, 6vh, 72px);
+      margin-top: clamp(30px, 6vh, 64px);
+      border-bottom: 1px solid var(--line);
     }
     .row {
       display: grid;
-      grid-template-columns: 46px minmax(0, 1fr) 150px 132px;
+      grid-template-columns: 46px 1fr;
       gap: var(--gap);
-      align-items: baseline;
-      padding: clamp(16px, 3vh, 28px) 0;
+      align-items: start;
+      padding: clamp(24px, 4.2vh, 42px) 0;
       border-top: 1px solid var(--line);
-      transition: opacity 0.4s ease;
     }
-    .row:last-child {
-      border-bottom: 1px solid var(--line);
+    .row__body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .row__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
     }
     .row__name {
-      font-size: clamp(20px, 2.9vw, 42px);
+      margin: 0;
+      font-size: clamp(20px, 2.4vw, 36px);
       font-weight: 300;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+      color: var(--fg);
     }
-    .row__desc {
-      display: block;
-      margin-top: 10px;
-      max-width: 60ch;
-      font-size: 11px;
-      line-height: 1.55;
-      letter-spacing: 0.04em;
-      text-transform: none;
+    .row__badge {
+      padding: 3px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
       color: var(--mut);
     }
-    .row:hover .row__name {
-      transform: translateX(clamp(10px, 2vw, 26px));
+    .row__desc {
+      margin: 0;
+      max-width: 70ch;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--paper);
+    }
+    .row__deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--mut);
+      padding: 6px 0;
+    }
+    .row__actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
     }
     .row:hover .row__i {
       color: var(--acc);
@@ -456,22 +460,26 @@
       transition: color 0.4s ease;
     }
     @media (max-width: 760px) {
-      .row { grid-template-columns: 30px minmax(0, 1fr); row-gap: 6px; }
-      .row__cat, .row__yr { grid-column: 2; }
+      .row { grid-template-columns: 28px 1fr; }
+      .row__deliverables { flex-direction: column; gap: 6px; }
     }
 
-    /* ---------- ESCOPOS · VISUAL (prototipo-editorial.html asymmetric works) ---------- */
-    .work {
-      padding-top: clamp(72px, 16vh, 210px);
+    /* ---------- TRANSIÇÃO DE MÉTODO & INFRAESTRUTURA ---------- */
+    .transition-sec {
+      padding-top: clamp(80px, 16vh, 200px);
+      padding-bottom: clamp(50px, 10vh, 120px);
+      border-bottom: 1px solid var(--line);
     }
-    .work figcaption {
-      margin-top: 12px;
-      padding-top: 10px;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
+    .transition-lead {
+      align-self: center;
+    }
+    .note {
+      font-family: var(--sans);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(15px, 1.35vw, 20px);
+      line-height: 1.55;
+      color: var(--paper);
     }
     .fig {
       margin: 0;
@@ -486,41 +494,6 @@
     }
     .fig:hover img {
       transform: scale(1.018);
-    }
-    .full {
-      width: 100vw;
-      margin-left: calc(-1 * var(--pad));
-      max-height: 76vh;
-      overflow: hidden;
-    }
-    .full img {
-      width: 100%;
-      height: 100%;
-      max-height: 76vh;
-      object-fit: cover;
-    }
-    .void {
-      padding: clamp(70px, 20vh, 220px) 0;
-    }
-    .note {
-      font-family: var(--sans);
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(15px, 1.35vw, 20px);
-      line-height: 1.55;
-      color: var(--paper);
-    }
-    .c01 { grid-column: 1 / span 6; }
-    .c01c { grid-column: 7 / span 5; align-self: center; }
-    .c02 { grid-column: 7 / -1; }
-    .c02c { grid-column: 2 / span 4; align-self: center; }
-    .c04 { grid-column: 4 / span 9; }
-    .c05 { grid-column: 5 / span 4; }
-    .c06a { grid-column: 1 / span 5; }
-    .c06b { grid-column: 7 / span 6; align-self: center; }
-    @media (max-width: 900px) {
-      .c01, .c01c, .c02, .c02c, .c04, .c05, .c06a, .c06b { grid-column: 1 / -1; }
-      .c01c, .c02c, .c06b { margin-top: 20px; }
     }
 
     /* ---------- 04. ACERVO CURATORIAL COMPLETO (5 ATOS — ZARA / BARON & BARON) ---------- */
@@ -1059,9 +1032,9 @@
     }
   </style>
 </head>
-<body data-density="1">
+<body data-density="2">
 
-  <!-- Procedural SVG Surface Texture (3.2% Opacity) -->
+  <!-- Procedural SVG Surface Texture (Optimized 2.5% Opacity) -->
   <svg class="tactile-grain" aria-hidden="true">
     <filter id="bureau-tactile-noise">
       <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" stitchTiles="stitch" />
@@ -1076,20 +1049,18 @@
     <nav class="topbar__nav" aria-label="Navegação Principal">
       <a href="#posicao">01 Posição</a>
       <a href="#escopos">02 Escopos</a>
-      <a href="#acervo">03 Acervo (89)</a>
+      <a href="#metodo">03 Método</a>
+      <a href="#acervo">04 Acervo (89)</a>
       <a href="#ato-revista_hyb" onclick="openMagazineReader(0)">Revista HYB (24 Pág.)</a>
-      <a href="#servicos">04 Governança</a>
-      <a href="#contato">05 Contato</a>
+      <a href="#servicos">05 Governança</a>
+      <a href="#contato">06 Contato</a>
     </nav>
     <span class="avail"><span class="dot"></span>Novos projetos sob consulta</span>
     <span class="mono" data-clock>São Paulo —:—</span>
   </div>
 
-  <!-- PERIPHERAL RAILS & EDGES (prototipo-editorial.html) -->
-  <div class="rail rail--l"><span class="micro">Estratégia &amp; Direção criativa</span></div>
-  <div class="rail rail--r"><span class="micro">Conteúdo, Arte &amp; Execução</span></div>
+  <!-- READING PROGRESS INDICATOR (DISCREET & UNCLUTTERED) -->
   <div class="edge edge--l micro mono" data-prog>000%</div>
-  <div class="edge edge--r micro mono">Escopos sob consulta</div>
 
   <!-- FLOATING MAGNETIC CURSOR -->
   <div class="cursor" data-cursor><span>Ver</span></div>
@@ -1130,126 +1101,113 @@
     <blockquote class="manifesto__quote" data-reveal>“A diferenciação não está no discurso: está no portfólio, na qualidade do raciocínio, na linguagem, na coerência entre conceito e execução e na clareza de processo.”</blockquote>
   </section>
 
-  <!-- 03. ESCOPOS DE TRABALHO (prototipo-editorial.html) -->
+  <!-- 03. ESCOPOS DE TRABALHO -->
   <section class="sec index" id="escopos">
-    <div class="g">
-      <div class="micro" data-reveal style="grid-column:1 / span 5"><span class="mono micro--acc">03</span> — Escopos de trabalho</div>
-      <div class="micro" data-reveal style="grid-column:8 / span 5;text-align:right">Faixas sob consulta · Escopo por escrito</div>
+    <div class="g" data-reveal>
+      <div class="micro" style="grid-column:1 / span 5"><span class="mono micro--acc">03</span> — Escopos de trabalho</div>
+      <div class="micro" style="grid-column:6 / span 7;text-align:right">Direção criativa · Posicionamento · Presença digital · Acervo</div>
     </div>
     <div class="rows">
-      <a class="row" href="#escopo-01" data-reveal>
+      <div class="row" data-reveal>
         <span class="row__i micro mono">01</span>
-        <span class="row__name">Diagnóstico de comunicação
-          <span class="row__desc">Análise da presença digital, da linguagem, do posicionamento e das prioridades, com reunião executiva de apresentação. Não inclui implementação nem pesquisa extensa.</span>
-        </span>
-        <span class="row__cat micro">Projeto único</span>
-        <span class="row__yr micro mono">Sob consulta</span>
-      </a>
-      <a class="row" href="#escopo-02" data-reveal>
+        <div class="row__body">
+          <div class="row__head">
+            <h3 class="row__name">Diagnóstico de Comunicação</h3>
+            <span class="row__badge micro mono">Projeto Único · Entrega Pontual</span>
+          </div>
+          <p class="row__desc">Auditoria profunda da presença digital, leitura crítica de linguagem e posicionamento, identificação de gargalos de percepção e mapa de prioridades acionáveis com reunião executiva de direcionamento.</p>
+          <div class="row__deliverables micro">
+            <span>• Auditoria de canais e feed</span>
+            <span>• Leitura de tom e estética</span>
+            <span>• Relatório executivo com prioridades</span>
+            <span>• 1 Reunião de apresentação</span>
+          </div>
+          <div class="row__actions">
+            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('01. Diagnóstico de Comunicação')">Solicitar Diagnóstico ↗</button>
+            <a href="#acervo" class="btn-editorial" onclick="filterCatalog('bureau')">Ver Provas no Acervo ↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" data-reveal>
         <span class="row__i micro mono">02</span>
-        <span class="row__name">Estratégia e direção criativa
-          <span class="row__desc">Posicionamento de comunicação, pilares editoriais, tom de voz, Manual de DNA visual/tipográfico e plano editorial inicial de 30 dias. Uma rodada consolidada de ajustes.</span>
-        </span>
-        <span class="row__cat micro">Projeto único</span>
-        <span class="row__yr micro mono">Sob consulta</span>
-      </a>
-      <a class="row" href="#escopo-03" data-reveal>
+        <div class="row__body">
+          <div class="row__head">
+            <h3 class="row__name">Estratégia &amp; Direção Criativa</h3>
+            <span class="row__badge micro mono">Projeto Estruturante · 30 Dias</span>
+          </div>
+          <p class="row__desc">Fundação ou reposicionamento de marca: tese de posicionamento, pilares editoriais, tom de voz, Manual de DNA visual e tipográfico (Design System do Bureau) e plano de conteúdo de 30 dias com conceito criativo.</p>
+          <div class="row__deliverables micro">
+            <span>• Tese de posicionamento</span>
+            <span>• Manual de DNA de linguagem</span>
+            <span>• Diretrizes de imagem e tipografia</span>
+            <span>• Plano editorial de 30 dias</span>
+          </div>
+          <div class="row__actions">
+            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('02. Estratégia & Direção Criativa')">Iniciar Estruturação ↗</button>
+            <a href="#acervo" class="btn-editorial" onclick="filterCatalog('bureau')">Ver Cases de Branding ↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" data-reveal>
         <span class="row__i micro mono">03</span>
-        <span class="row__name">Conteúdo e presença digital
-          <span class="row__desc">Planejamento mensal, até 8 peças principais por mês, redação e adaptação para até duas plataformas, publicação e relatório sintético.</span>
-        </span>
-        <span class="row__cat micro">Mensal</span>
-        <span class="row__yr micro mono">Sob consulta</span>
-      </a>
-      <a class="row" href="#escopo-04" data-reveal>
+        <div class="row__body">
+          <div class="row__head">
+            <h3 class="row__name">Conteúdo &amp; Presença Digital</h3>
+            <span class="row__badge micro mono">Retenção Mensal · Até 8 Peças/Mês</span>
+          </div>
+          <p class="row__desc">Ritmo editorial autoral contínuo: planejamento mensal, criação e redação de até 8 peças principais por mês (carrosséis densos, ensaios, narrativas visuais), adaptação para até 2 plataformas e relatório sintético.</p>
+          <div class="row__deliverables micro">
+            <span>• Calendário editorial mensal</span>
+            <span>• Até 8 peças principais com redação autoral</span>
+            <span>• Direção de arte para feeds e stories</span>
+            <span>• Relatório sintético de performance</span>
+          </div>
+          <div class="row__actions">
+            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('03. Conteúdo & Presença Digital')">Contratar Retenção ↗</button>
+            <a href="#ato-revista_hyb" class="btn-editorial">Ver Revista HYB (24 Pág.) ↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" data-reveal>
         <span class="row__i micro mono">04</span>
-        <span class="row__name">Bureau integrado
-          <span class="row__desc">Direção estratégica contínua, planejamento, até 12 peças principais, adaptação para até duas plataformas, uma campanha temática e acompanhamento mensal.</span>
-        </span>
-        <span class="row__cat micro">Mensal</span>
-        <span class="row__yr micro mono">Sob consulta</span>
-      </a>
+        <div class="row__body">
+          <div class="row__head">
+            <h3 class="row__name">Bureau Integrado</h3>
+            <span class="row__badge micro mono micro--acc">Retenção Estratégica Completa</span>
+          </div>
+          <p class="row__desc">Acompanhamento contínuo como braço direito de direção criativa e comunicação da marca: planejamento mensal, até 12 peças principais, 1 campanha temática trimestral, curadoria visual e suporte consultivo permanente.</p>
+          <div class="row__deliverables micro">
+            <span>• Direção criativa contínua</span>
+            <span>• Até 12 peças principais/mês</span>
+            <span>• 1 Campanha conceitual trimestral</span>
+            <span>• Consultoria e reuniões quinzenais</span>
+          </div>
+          <div class="row__actions">
+            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('04. Bureau Integrado')">Solicitar Proposta Integrada ↗</button>
+            <a href="#acervo" class="btn-editorial" onclick="filterCatalog('all')">Explorar Todo o Repertório ↓</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ESCOPOS · ARQUITETURA VISUAL ASSIMÉTRICA (prototipo-editorial.html + Ativos Reais) -->
-  <section class="sec" id="trabalhos">
-
-    <article class="work" id="escopo-01">
-      <div class="g">
-        <figure class="fig c01" data-reveal data-view onclick="selectServiceModalidade('01. Diagnóstico de Comunicação')">
-          <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/01.jpg" alt="Guia de Formatos e Escala — Diagnóstico de Comunicação" loading="lazy">
-          <figcaption class="micro"><span><span class="mono micro--acc">01</span> Diagnóstico de comunicação</span><span>Escopo · Projeto único</span></figcaption>
-        </figure>
-        <div class="c01c" data-reveal>
-          <div class="note">Leitura crítica da presença digital, do posicionamento e das prioridades, com caminhos recomendados e reunião executiva de apresentação.</div>
-          <div class="micro rule" style="margin-top:26px;padding-top:12px;display:flex;justify-content:space-between;align-items:center">
-            <span>Análise · Prioridades · Apresentação</span>
-            <button type="button" class="btn-editorial" onclick="selectServiceModalidade('01. Diagnóstico de Comunicação')">Solicitar ↗</button>
-          </div>
-        </div>
+  <!-- TRANSIÇÃO EDITORIAL: INFRAESTRUTURA & CURADORIA HUMANA -->
+  <section class="sec transition-sec g" id="metodo">
+    <div class="micro transition-kicker" data-reveal style="grid-column: 1 / span 3">
+      <span class="mono micro--acc">MÉTODO</span> — Ateliê Híbrido
+    </div>
+    <div class="transition-lead" data-reveal style="grid-column: 4 / span 8">
+      <p class="note" style="margin: 0; font-size: clamp(17px, 1.8vw, 26px); line-height: 1.45;">
+        “A máquina propõe na velocidade da luz; a mão humana julga, corta e assina no tempo da matéria. Ferramentas digitais e inteligência artificial entram como infraestrutura de trabalho — nunca como substituto do repertório, da autoria ou do rigor estético.”
+      </p>
+      <div class="micro" style="margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <span>5 Atos Editoriais · 89 Obras Catalogadas · Sem Intermediários</span>
+        <a href="#acervo" class="micro--acc">Explorar Acervo Curatorial ↓</a>
       </div>
-    </article>
-
-    <article class="work" id="escopo-02">
-      <figure class="fig full" data-reveal data-view onclick="selectServiceModalidade('02. Estratégia & Direção Criativa')">
-        <img src="assets/bureau/08-10-2026%20CAMPANHA/rochosa%2002.jpg" alt="Casa Rochosa — Estratégia e Direção Criativa" loading="lazy">
-      </figure>
-      <div class="micro rule" style="padding-top:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <span><span class="mono micro--acc">02</span> Estratégia e direção criativa — posicionamento, pilares editoriais, tom de voz, conceito criativo e plano editorial de 30 dias</span>
-        <span class="mono">Escopo · Projeto único · Sob consulta</span>
-      </div>
-    </article>
-
-    <article class="work" id="escopo-03">
-      <div class="g">
-        <div class="c02c" data-reveal>
-          <div class="micro mono micro--acc">03 — Conteúdo e presença digital</div>
-          <div class="note" style="margin-top:16px">Ritmo editorial constante: planejamento, redação autoral sem jargão de funil, adaptação para até duas plataformas, publicação e relatório sintético.</div>
-          <div class="micro" style="margin-top:24px">Mensal · Até 8 peças principais/mês</div>
-          <div style="margin-top:20px">
-            <button type="button" class="btn-editorial" onclick="selectServiceModalidade('03. Conteúdo & Presença Digital')">Solicitar Escopo ↗</button>
-          </div>
-        </div>
-        <figure class="fig c02" data-reveal data-view onclick="openMagazineReader(0)">
-          <img src="assets/revista_hyb/01_HYB_ED01_PAG_01_CAPA.png" alt="Revista HYB Ed. 001 — Conteúdo e Presença Digital" loading="lazy">
-          <figcaption class="micro"><span><span class="mono micro--acc">03</span> Conteúdo e presença digital</span><span>Revista HYB · 24 Páginas</span></figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article class="work" id="escopo-04">
-      <div class="g">
-        <figure class="fig c04" data-reveal data-view onclick="selectServiceModalidade('04. Bureau Integrado')">
-          <img src="assets/bureau/2026-10-02-CARR%20THAIS/01.png" alt="Ensaio Curatorial Galeria Espectro — Bureau Integrado" loading="lazy">
-          <figcaption class="micro"><span><span class="mono micro--acc">04</span> Bureau integrado — Direção contínua + 12 peças + campanha</span><span>Mensal · Sob consulta</span></figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <article class="work" id="processo">
-      <div class="g void">
-        <div class="micro" style="grid-column:1 / span 3" data-reveal>— Matéria &amp; Processo</div>
-        <figure class="fig c05" data-reveal data-view onclick="document.getElementById('ato-acervo_materico').scrollIntoView({behavior:'smooth'})">
-          <img src="assets/acervo_materico/006_DALLIDO_1988_A_DANCA_BEHANCE.jpg" alt="Topografia do óleo e linho em close no ateliê" loading="lazy">
-        </figure>
-        <div class="micro" style="grid-column:10 / span 3;text-align:right;align-self:end" data-reveal>Escopo, prazos e revisões<br><span class="mono micro--acc">definidos por escrito</span></div>
-      </div>
-    </article>
-
-    <article class="work" id="uso-de-ia">
-      <div class="g">
-        <figure class="fig c06a" data-reveal data-view onclick="document.getElementById('ato-shoes').scrollIntoView({behavior:'smooth'})">
-          <img src="assets/shoes/001_SHOES_2.0_005.jpg" alt="Caderno Shoes 2.0 — Curadoria e revisão humana" loading="lazy">
-          <figcaption class="micro"><span>— Uso de IA</span><span>Curadoria e revisão humana</span></figcaption>
-        </figure>
-        <div class="c06b" data-reveal>
-          <div class="note">Ferramentas digitais e IA entram como infraestrutura de trabalho — não como substituto do julgamento, da curadoria ou da responsabilidade profissional. Cada entrega passa por revisão humana antes de ir ao ar.</div>
-          <div class="micro rule" style="margin-top:26px;padding-top:12px">A máquina propõe · O humano autoriza</div>
-        </div>
-      </div>
-    </article>
-
+    </div>
   </section>
 
   <!-- 04. ACERVO CURATORIAL COMPLETO — OS 5 ATOS (ZARA / BARON & BARON) -->
@@ -1275,8 +1233,8 @@
       </div>
       <div class="density-group micro">
         <span style="margin-right:6px">View:</span>
-        <button type="button" class="chip active" data-view-btn="1" onclick="setGridDensity('1')">[ 1 · Editorial ]</button>
-        <button type="button" class="chip" data-view-btn="2" onclick="setGridDensity('2')">[ 2 · Díptico ]</button>
+        <button type="button" class="chip" data-view-btn="1" onclick="setGridDensity('1')">[ 1 · Editorial ]</button>
+        <button type="button" class="chip active" data-view-btn="2" onclick="setGridDensity('2')">[ 2 · Díptico ]</button>
         <button type="button" class="chip" data-view-btn="4" onclick="setGridDensity('4')">[ 4 · Índice ]</button>
       </div>
     </div>
