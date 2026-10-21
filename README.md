@@ -1,4 +1,4 @@
-# WEBSITE OFICIAL — BUREAU CRIATIVO AUTORAL (DALLIDO.1988)
+# WEBSITE OFICIAL — HYB STUDIO
 **Direção Soberana:** Henrique Taveira Ferreira (`DALLIDO.1988`)  
 **Arquitetura & Compilação:** `github-web-builder`  
 **Diretório Autônomo de Deploy:** `H:\Meu Drive\(011)BUREAU_CRIATIVO_AUTORAL\WEBSITE\`
