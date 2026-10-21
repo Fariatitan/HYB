@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://fariatitan.github.io/bureaucriativo/sitemap.xml
+Sitemap: https://fariatitan.github.io/HYB/sitemap.xml

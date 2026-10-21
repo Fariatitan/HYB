@@ -565,23 +565,23 @@ html_document = f'''<!DOCTYPE html>
   <meta name="author" content="Henrique Taveira Ferreira (DALLIDO.1988)">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07090c">
-  <link rel="canonical" href="https://fariatitan.github.io/bureaucriativo/">
+  <link rel="canonical" href="https://fariatitan.github.io/HYB/">
 
   <!-- OPEN GRAPH / SOCIAL -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:url" content="https://fariatitan.github.io/bureaucriativo/">
+  <meta property="og:url" content="https://fariatitan.github.io/HYB/">
   <meta property="og:site_name" content="Bureau Criativo Autoral — DALLIDO.1988">
   <meta property="og:title" content="Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)">
   <meta property="og:description" content="Estratégia, direção criativa, linguagem e acervo autoral. A máquina propõe. O humano autoriza.">
-  <meta property="og:image" content="https://fariatitan.github.io/bureaucriativo/{hero_cover_url}">
+  <meta property="og:image" content="https://fariatitan.github.io/HYB/{hero_cover_url}">
   <meta property="og:image:alt" content="Capa Monumental do Caderno de Branding — Bureau Criativo Autoral">
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)">
   <meta name="twitter:description" content="Estratégia, direção criativa, Revista HYB e acervo matérico sob o Design System Soberano do Bureau.">
-  <meta name="twitter:image" content="https://fariatitan.github.io/bureaucriativo/{hero_cover_url}">
+  <meta name="twitter:image" content="https://fariatitan.github.io/HYB/{hero_cover_url}">
 
   <!-- SCHEMA.ORG JSON-LD -->
   <script type="application/ld+json">
@@ -590,9 +590,9 @@ html_document = f'''<!DOCTYPE html>
     "@graph": [
       {{
         "@type": "WebSite",
-        "@id": "https://fariatitan.github.io/bureaucriativo/#website",
+        "@id": "https://fariatitan.github.io/HYB/#website",
         "name": "Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)",
-        "url": "https://fariatitan.github.io/bureaucriativo/"
+        "url": "https://fariatitan.github.io/HYB/"
       }},
       {{
         "@type": "Person",
@@ -606,7 +606,7 @@ html_document = f'''<!DOCTYPE html>
         "@type": "ProfessionalService",
         "@id": "#bureau-criativo-autoral",
         "name": "Bureau Criativo Autoral",
-        "url": "https://fariatitan.github.io/bureaucriativo/",
+        "url": "https://fariatitan.github.io/HYB/",
         "founder": {{ "@id": "#henrique-taveira" }},
         "description": "Estrutura independente de estratégia de marca, direção criativa, desenvolvimento de linguagem e produção transmídia.",
         "areaServed": "BR"
@@ -2205,19 +2205,19 @@ with open(os.path.join(parent_bureau, 'PORTFOLIO_SITE_ATELIE_BUREAU.html'), 'w',
 # Ensure robots.txt, sitemap.xml, .nojekyll and .gitignore exist in WEBSITE/
 robots_out = os.path.join(website_dir, 'robots.txt')
 with open(robots_out, 'w', encoding='utf-8') as f:
-    f.write("User-agent: *\nAllow: /\nSitemap: https://fariatitan.github.io/bureaucriativo/sitemap.xml\n")
+    f.write("User-agent: *\nAllow: /\nSitemap: https://fariatitan.github.io/HYB/sitemap.xml\n")
 
 sitemap_out = os.path.join(website_dir, 'sitemap.xml')
 with open(sitemap_out, 'w', encoding='utf-8') as f:
     f.write('''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fariatitan.github.io/bureaucriativo/</loc>
+    <loc>https://fariatitan.github.io/HYB/</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fariatitan.github.io/bureaucriativo/assets/revista_hyb/REVISTA_HYB_ED01_24_PAGINAS.pdf</loc>
+    <loc>https://fariatitan.github.io/HYB/assets/revista_hyb/REVISTA_HYB_ED01_24_PAGINAS.pdf</loc>
     <lastmod>2026-10-17</lastmod>
     <priority>0.8</priority>
   </url>
