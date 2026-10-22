@@ -4,7 +4,7 @@ import re
 from urllib.parse import quote, unquote
 from PIL import Image
 
-website_dir = r'H:\Meu Drive\(011)BUREAU_CRIATIVO_AUTORAL\WEBSITE'
+website_dir = r'H:\Meu Drive\(011) HYB - STUDIO\WEBSITE'
 assets_dir = os.path.join(website_dir, 'assets')
 catalog_path = os.path.join(website_dir, 'curated_catalog.json')
 
@@ -135,10 +135,7 @@ def curate_item_metadata(cat_key: str, rel_path: str, idx: int, w: int, h: int):
             "015_": ("REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO)", "Documentação fotográfica crua do embate físico com o suporte."),
             "016_": ("CURADORIA GALERIA ESPECTRO — A PISTA (4:5)", "Peça de posicionamento editorial integrando acervo autoral e mercado de arte."),
             "017_": ("AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA", "Estudo de escala e presença arquitetônica da obra em parede monumental."),
-            "021_": ("ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA", "Síntese entre gesto expressionista e controle estrutural de cor."),
-            "022_": ("PROVA DE RETENÇÃO — INSIGHTS EDITORIAIS I", "Evidência real de impacto orgânico e retenção qualificada de público."),
-            "023_": ("PROVA DE RETENÇÃO — RANKING DE CONTEÚDO AUTORAL", "Métrica auditada demonstrando a força de tração da direção de arte autoral."),
-            "024_": ("PROVA DE RETENÇÃO — ANÁLISE DE IMPACTO EM AMBIENTE", "Dados de engajamento profundo em publicações de obras aplicadas à arquitetura.")
+            "021_": ("ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA", "Síntese entre gesto expressionista e controle estrutural de cor.")
         }
         prefix = filename[:4]
         if prefix in materico_map:
@@ -150,10 +147,10 @@ def curate_item_metadata(cat_key: str, rel_path: str, idx: int, w: int, h: int):
     elif cat_key == 'bureau':
         if filename == "001_CAPA_CADERNO_DE_BRANDING_BUREAU_MONUMENTAL.jpg":
             series_label = "PEÇA MATRIZ // MONOGRAFIA DE BRANDING"
-            title = "CADERNO DE BRANDING — BUREAU CRIATIVO AUTORAL (CAPA MONUMENTAL)"
+            title = "CADERNO DE BRANDING — HYB STUDIO (CAPA MONUMENTAL)"
             caption = "Encadernação em linho carvão profundo unindo tipografia suíça, pintura matérica a óleo e arquitetura brutalista em concreto."
         elif "08-10-2026 CAMPANHA" in subfolder:
-            series_label = "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS"
+            series_label = "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS"
             camp_map = {
                 "cactos 01.jpg": ("CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)", "Diálogo entre paisagismo árido, arquitetura minimalista e curadoria de arte."),
                 "cactos 01a.jpg": ("CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)", "Continuidade visual de carrossel com precisão tipográfica e respiro espacial."),
@@ -162,7 +159,7 @@ def curate_item_metadata(cat_key: str, rel_path: str, idx: int, w: int, h: int):
                 "fachada 03.jpg": ("FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)", "Volume monolítico espelhado refletindo a topografia natural ao redor."),
                 "fachada 03a.jpg": ("FACHADA ESPELHADA — 03A (DESDOBRAMENTO)", "Direção de arte comercial para posicionamento de alto padrão na Galeria Espectro.")
             }
-            title, caption = camp_map.get(filename, (f"CAMPANHA CASAS COLECIONÁVEIS — {name_no_ext.upper()}", "Direção criativa e narrativa visual para arquitetura e acervo."))
+            title, caption = camp_map.get(filename, (f"CAMPANHA CASES COLECIONÁVEIS — {name_no_ext.upper()}", "Direção criativa e narrativa visual para arquitetura e acervo."))
         elif "2026-10-10-CARR FORMATOS" in subfolder:
             series_label = "ATO 05 // SISTEMA DE ESCALA & FORMATOS DE ACERVO"
             fmt_map = {
@@ -202,7 +199,7 @@ def curate_item_metadata(cat_key: str, rel_path: str, idx: int, w: int, h: int):
             title = "STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16)"
             caption = "Chamada vertical 9:16 em textura de pergaminho conectando os Stories ao ensaio curatorial."
         else:
-            series_label = "ATO 05 // BUREAU CRIATIVO & CASAS COLECIONÁVEIS"
+            series_label = "ATO 05 // HYB STUDIO & CASES COLECIONÁVEIS"
             title = name_no_ext.replace('_', ' ').replace('-', ' ').upper()
             caption = "Estratégia visual, sistemas de identidade e direção de arte comercial."
 
@@ -364,8 +361,8 @@ act_configs = [
     {
         "key": "bureau",
         "num": "ATO 05",
-        "code": "BUREAU // SISTEMAS & CAMPANHAS",
-        "title": "Bureau Criativo &amp; <em>Casas Colecionáveis</em>",
+        "code": "HYB // SISTEMAS & CASES",
+        "title": "HYB Studio &amp; <em>Cases Colecionáveis</em>",
         "subtitle": "Campanhas arquitetônicas, sistemas de formatos, curadoria Galeria Espectro e dossiês de repertório.",
         "quote": "“Estratégia visual para marcas culturais, galerias e negócios autorais que recusam a estética descartável de linha de montagem.”",
         "source_path": "assets/bureau/"
@@ -457,7 +454,7 @@ def build_acts_html():
                         "2026-10-15-CARR hilma de domingo": ("SÉRIE 04 // 2026-10-15-CARR HILMA DE DOMINGO", "Repertório Cultural: The Ten Largest (1907) — Pares Obra em Moldura + Corte Editorial 3:4 (01 a 05)"),
                         "2026-10-16-Stories hilma": ("SÉRIE 05 // 2026-10-16-STORIES HILMA", "Desdobramento Vertical 9:16 — Diálogos Galeria Espectro")
                     }
-                    st_kicker, st_name = sub_titles.get(sub, (f"SÉRIE // {sub.upper()}", "Ativos Curados do Bureau"))
+                    st_kicker, st_name = sub_titles.get(sub, (f"SÉRIE // {sub.upper()}", "Ativos Curados HYB Studio"))
                     plates_html.append(f'''
                     <div class="subseries-divider" data-cat="{key}" data-reveal>
                       <span class="micro mono micro--acc">{st_kicker}</span>
@@ -560,8 +557,8 @@ html_document = f'''<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988) | Direção Criativa, Estratégia &amp; Acervo</title>
-  <meta name="description" content="Bureau criativo autoral sob direção de Henrique Taveira (DALLIDO.1988): estratégia, direção criativa, linguagem, Revista HYB (Late Night Tales) e acervo matérico.">
+  <title>HYB — STUDIO · Henrique Taveira (DALLIDO.1988) | Direção Criativa, Estratégia &amp; Acervo</title>
+  <meta name="description" content="HYB — STUDIO sob direção de Henrique Taveira (DALLIDO.1988): estratégia, direção criativa, sistemas transmídia, Revista HYB (Late Night Tales) e acervo matérico.">
   <meta name="author" content="Henrique Taveira Ferreira (DALLIDO.1988)">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07090c">
@@ -571,16 +568,16 @@ html_document = f'''<!DOCTYPE html>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://fariatitan.github.io/HYB/">
-  <meta property="og:site_name" content="Bureau Criativo Autoral — DALLIDO.1988">
-  <meta property="og:title" content="Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)">
+  <meta property="og:site_name" content="HYB — STUDIO · DALLIDO.1988">
+  <meta property="og:title" content="HYB — STUDIO · Henrique Taveira (DALLIDO.1988)">
   <meta property="og:description" content="Estratégia, direção criativa, linguagem e acervo autoral. A máquina propõe. O humano autoriza.">
   <meta property="og:image" content="https://fariatitan.github.io/HYB/{hero_cover_url}">
-  <meta property="og:image:alt" content="Capa Monumental do Caderno de Branding — Bureau Criativo Autoral">
+  <meta property="og:image:alt" content="Capa Monumental do Caderno de Branding — HYB STUDIO">
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)">
-  <meta name="twitter:description" content="Estratégia, direção criativa, Revista HYB e acervo matérico sob o Design System Soberano do Bureau.">
+  <meta name="twitter:title" content="HYB — STUDIO · Henrique Taveira (DALLIDO.1988)">
+  <meta name="twitter:description" content="Estratégia, direção criativa, Revista HYB e acervo matérico sob o Design System Soberano do HYB Studio.">
   <meta name="twitter:image" content="https://fariatitan.github.io/HYB/{hero_cover_url}">
 
   <!-- SCHEMA.ORG JSON-LD -->
@@ -591,7 +588,7 @@ html_document = f'''<!DOCTYPE html>
       {{
         "@type": "WebSite",
         "@id": "https://fariatitan.github.io/HYB/#website",
-        "name": "Bureau Criativo Autoral — Henrique Taveira (DALLIDO.1988)",
+        "name": "HYB — STUDIO · Henrique Taveira (DALLIDO.1988)",
         "url": "https://fariatitan.github.io/HYB/"
       }},
       {{
@@ -604,8 +601,8 @@ html_document = f'''<!DOCTYPE html>
       }},
       {{
         "@type": "ProfessionalService",
-        "@id": "#bureau-criativo-autoral",
-        "name": "Bureau Criativo Autoral",
+        "@id": "#hyb-studio",
+        "name": "HYB — STUDIO",
         "url": "https://fariatitan.github.io/HYB/",
         "founder": {{ "@id": "#henrique-taveira" }},
         "description": "Estrutura independente de estratégia de marca, direção criativa, desenvolvimento de linguagem e produção transmídia.",
@@ -1593,16 +1590,16 @@ html_document = f'''<!DOCTYPE html>
 
   <!-- Procedural SVG Surface Texture (Optimized 2.5% Opacity) -->
   <svg class="tactile-grain" aria-hidden="true">
-    <filter id="bureau-tactile-noise">
+    <filter id="hyb-tactile-noise">
       <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" stitchTiles="stitch" />
       <feColorMatrix type="saturate" values="0" />
     </filter>
-    <rect width="100%" height="100%" filter="url(#bureau-tactile-noise)" />
+    <rect width="100%" height="100%" filter="url(#hyb-tactile-noise)" />
   </svg>
 
   <!-- TOPBAR CHROME (prototipo-editorial.html) -->
   <div class="topbar micro">
-    <a href="#topo" class="micro--fg">Bureau Criativo Autoral <span class="mono micro--acc">// HTF</span></a>
+    <a href="#topo" class="micro--fg">HYB — STUDIO <span class="mono micro--acc">// HTF</span></a>
     <nav class="topbar__nav" aria-label="Navegação Principal">
       <a href="#posicao">01 Posição</a>
       <a href="#escopos">02 Escopos</a>
@@ -1626,7 +1623,7 @@ html_document = f'''<!DOCTYPE html>
   <header class="sec hero" id="topo">
     <div class="hero__meta micro">
       <span>01 — Posicionamento</span>
-      <span class="mono">Bureau criativo autoral · Henrique Taveira (DALLIDO.1988)</span>
+      <span class="mono">HYB — STUDIO · Henrique Taveira (DALLIDO.1988)</span>
       <span class="mono">São Paulo · 2026</span>
     </div>
     <div class="hero__grid">
@@ -1638,7 +1635,7 @@ html_document = f'''<!DOCTYPE html>
         </h1>
       </div>
       <figure class="hero__fig fig" data-reveal data-view onclick="openLightboxById('bureau_001')" title="Inspecionar Peça Matriz">
-        <img src="{hero_cover_url}" alt="Capa Monumental do Caderno de Branding — Bureau Criativo Autoral">
+        <img src="{hero_cover_url}" alt="Capa Monumental do Caderno de Branding — HYB STUDIO">
       </figure>
     </div>
     <div class="hero__foot micro">
@@ -1654,7 +1651,7 @@ html_document = f'''<!DOCTYPE html>
   <!-- 02. POSIÇÃO / MANIFESTO (prototipo-editorial.html) -->
   <section class="sec manifesto g" id="posicao">
     <div class="manifesto__label micro" data-reveal><span class="mono micro--acc">02</span> — Posição</div>
-    <p class="manifesto__lead" data-reveal>Um bureau criativo autoral que combina pensamento estratégico, direção de arte com repertório plástico de ateliê e produção de conteúdo para negócios que recusam o genérico. A operação é híbrida por natureza: estratégia, criação, edição e execução acontecem no mesmo lugar, com clareza de processo e coerência entre conceito e entrega.</p>
+    <p class="manifesto__lead" data-reveal>Um estúdio criativo autoral (HYB) que combina pensamento estratégico, direção de arte com repertório plástico de ateliê e produção de conteúdo para negócios que recusam o genérico. A operação é híbrida por natureza: estratégia, criação, edição e execução acontecem no mesmo lugar, com clareza de processo e coerência entre conceito e entrega.</p>
     <blockquote class="manifesto__quote" data-reveal>“A diferenciação não está no discurso: está no portfólio, na qualidade do raciocínio, na linguagem, na coerência entre conceito e execução e na clareza de processo.”</blockquote>
   </section>
 
@@ -1693,7 +1690,7 @@ html_document = f'''<!DOCTYPE html>
             <h3 class="row__name">Estratégia &amp; Direção Criativa</h3>
             <span class="row__badge micro mono">Projeto Estruturante · 30 Dias</span>
           </div>
-          <p class="row__desc">Fundação ou reposicionamento de marca: tese de posicionamento, pilares editoriais, tom de voz, Manual de DNA visual e tipográfico (Design System do Bureau) e plano de conteúdo de 30 dias com conceito criativo.</p>
+          <p class="row__desc">Fundação ou reposicionamento de marca: tese de posicionamento, pilares editoriais, tom de voz, Manual de DNA visual e tipográfico (Design System do HYB Studio) e plano de conteúdo de 30 dias com conceito criativo.</p>
           <div class="row__deliverables micro">
             <span>• Tese de posicionamento</span>
             <span>• Manual de DNA de linguagem</span>
@@ -1732,7 +1729,7 @@ html_document = f'''<!DOCTYPE html>
         <span class="row__i micro mono">04</span>
         <div class="row__body">
           <div class="row__head">
-            <h3 class="row__name">Bureau Integrado</h3>
+            <h3 class="row__name">HYB Integrado</h3>
             <span class="row__badge micro mono micro--acc">Retenção Estratégica Completa</span>
           </div>
           <p class="row__desc">Acompanhamento contínuo como braço direito de direção criativa e comunicação da marca: planejamento mensal, até 12 peças principais, 1 campanha temática trimestral, curadoria visual e suporte consultivo permanente.</p>
@@ -1743,7 +1740,7 @@ html_document = f'''<!DOCTYPE html>
             <span>• Consultoria e reuniões quinzenais</span>
           </div>
           <div class="row__actions">
-            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('04. Bureau Integrado')">Solicitar Proposta Integrada ↗</button>
+            <button type="button" class="btn-editorial btn-editorial--acc" onclick="selectServiceModalidade('04. HYB Integrado')">Solicitar Proposta Integrada ↗</button>
             <a href="#acervo" class="btn-editorial" onclick="filterCatalog('all')">Explorar Todo o Repertório ↓</a>
           </div>
         </div>
@@ -1786,7 +1783,7 @@ html_document = f'''<!DOCTYPE html>
         <button type="button" class="chip" data-filter="shoes" onclick="filterCatalog('shoes')">02. Shoes <span class="chip-count">{total_counts['shoes']}</span></button>
         <button type="button" class="chip" data-filter="boys_lambe" onclick="filterCatalog('boys_lambe')">03. Boys &amp; Rua <span class="chip-count">{total_counts['boys_lambe']}</span></button>
         <button type="button" class="chip" data-filter="acervo_materico" onclick="filterCatalog('acervo_materico')">04. Matérico <span class="chip-count">{total_counts['acervo_materico']}</span></button>
-        <button type="button" class="chip" data-filter="bureau" onclick="filterCatalog('bureau')">05. Bureau <span class="chip-count">{total_counts['bureau']}</span></button>
+        <button type="button" class="chip" data-filter="bureau" onclick="filterCatalog('bureau')">05. HYB Studio <span class="chip-count">{total_counts['bureau']}</span></button>
       </div>
       <div class="density-group micro">
         <span style="margin-right:6px">View:</span>
@@ -1886,7 +1883,7 @@ html_document = f'''<!DOCTYPE html>
           <option value="01. Diagnóstico de Comunicação">01. Diagnóstico de Comunicação (Projeto único)</option>
           <option value="02. Estratégia & Direção Criativa">02. Estratégia &amp; Direção Criativa (Projeto único)</option>
           <option value="03. Conteúdo & Presença Digital">03. Conteúdo &amp; Presença Digital (Mensal)</option>
-          <option value="04. Bureau Integrado" selected>04. Bureau Integrado (Direção Completa Mensal)</option>
+          <option value="04. HYB Integrado" selected>04. HYB Integrado (Direção Completa Mensal)</option>
           <option value="05. Aquisição de Obra / Acervo Autoral">05. Aquisição de Obra / Acervo Fine-Art</option>
         </select>
       </div>
@@ -1909,7 +1906,7 @@ html_document = f'''<!DOCTYPE html>
           <li><a href="#escopo-01">01 Diagnóstico de comunicação</a></li>
           <li><a href="#escopo-02">02 Estratégia e direção criativa</a></li>
           <li><a href="#escopo-03">03 Conteúdo e presença digital</a></li>
-          <li><a href="#escopo-04">04 Bureau integrado</a></li>
+          <li><a href="#escopo-04">04 HYB Integrado</a></li>
         </ul>
       </div>
       <div>Acervo (5 Atos)
@@ -1918,7 +1915,7 @@ html_document = f'''<!DOCTYPE html>
           <li><a href="#ato-shoes">Ato 02 — Caderno Shoes</a></li>
           <li><a href="#ato-boys_lambe">Ato 03 — Boys &amp; A Rua</a></li>
           <li><a href="#ato-acervo_materico">Ato 04 — Acervo Matérico</a></li>
-          <li><a href="#ato-bureau">Ato 05 — Bureau &amp; Casas</a></li>
+          <li><a href="#ato-bureau">Ato 05 — HYB &amp; Cases</a></li>
         </ul>
       </div>
       <div>Como trabalhamos
@@ -1939,7 +1936,7 @@ html_document = f'''<!DOCTYPE html>
       </div>
     </div>
     <div class="micro mono" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 0 36px">
-      <span>© 2026 Bureau Criativo Autoral — Henrique Taveira Ferreira (DALLIDO.1988)</span>
+      <span>© 2026 HYB — STUDIO · Henrique Taveira Ferreira (DALLIDO.1988)</span>
       <span>São Paulo · Brasil</span>
       <span data-prog>000%</span>
     </div>
@@ -2163,7 +2160,7 @@ html_document = f'''<!DOCTYPE html>
 
     function dispararEmailDiagnostico() {{
       var mod = document.getElementById('modalidadeSelect').value;
-      var subject = encodeURIComponent('[Bureau Criativo Autoral] Solicitação — ' + mod);
+      var subject = encodeURIComponent('[HYB — STUDIO] Solicitação — ' + mod);
       var body = encodeURIComponent(montarTextoBriefing());
       window.location.href = 'mailto:henrique992338736@gmail.com?subject=' + subject + '&body=' + body;
     }}

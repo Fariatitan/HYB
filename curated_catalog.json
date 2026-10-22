@@ -933,54 +933,6 @@
       "title": "ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA",
       "caption": "Síntese entre gesto expressionista e controle estrutural de cor.",
       "aspect_badge": "1:1 QUADRADO"
-    },
-    {
-      "id": "acervo_materico_017",
-      "name": "022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
-      "path": "assets/acervo_materico/022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
-      "url": "assets/acervo_materico/022_INSIGHTS_DALI_LIDO_19_09_2026_01_GERAL.png",
-      "w": 383,
-      "h": 808,
-      "ratio": 0.474,
-      "orient": "vertical",
-      "category": "acervo_materico",
-      "subfolder": "acervo_materico",
-      "series": "ATO 04 // ACERVO MATÉRICO & SÉRIES AUTORAIS",
-      "title": "PROVA DE RETENÇÃO — INSIGHTS EDITORIAIS I",
-      "caption": "Evidência real de impacto orgânico e retenção qualificada de público.",
-      "aspect_badge": "FORMATO NATIVO"
-    },
-    {
-      "id": "acervo_materico_018",
-      "name": "023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
-      "path": "assets/acervo_materico/023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
-      "url": "assets/acervo_materico/023_INSIGHTS_DALI_LIDO_19_09_2026_04_RANKING_CONTEUDO.png",
-      "w": 460,
-      "h": 856,
-      "ratio": 0.537,
-      "orient": "vertical",
-      "category": "acervo_materico",
-      "subfolder": "acervo_materico",
-      "series": "ATO 04 // ACERVO MATÉRICO & SÉRIES AUTORAIS",
-      "title": "PROVA DE RETENÇÃO — RANKING DE CONTEÚDO AUTORAL",
-      "caption": "Métrica auditada demonstrando a força de tração da direção de arte autoral.",
-      "aspect_badge": "9:16 VERTICAL"
-    },
-    {
-      "id": "acervo_materico_019",
-      "name": "024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
-      "path": "assets/acervo_materico/024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
-      "url": "assets/acervo_materico/024_INSIGHTS_DALI_LIDO_19_09_2026_05_DETALHE_POST_COZINHA.png",
-      "w": 1024,
-      "h": 769,
-      "ratio": 1.332,
-      "orient": "horizontal",
-      "category": "acervo_materico",
-      "subfolder": "acervo_materico",
-      "series": "ATO 04 // ACERVO MATÉRICO & SÉRIES AUTORAIS",
-      "title": "PROVA DE RETENÇÃO — ANÁLISE DE IMPACTO EM AMBIENTE",
-      "caption": "Dados de engajamento profundo em publicações de obras aplicadas à arquitetura.",
-      "aspect_badge": "4:3 HORIZONTAL"
     }
   ],
   "bureau": [
@@ -996,7 +948,7 @@
       "category": "bureau",
       "subfolder": "bureau",
       "series": "PEÇA MATRIZ // MONOGRAFIA DE BRANDING",
-      "title": "CADERNO DE BRANDING — BUREAU CRIATIVO AUTORAL (CAPA MONUMENTAL)",
+      "title": "CADERNO DE BRANDING — HYB STUDIO (CAPA MONUMENTAL)",
       "caption": "Encadernação em linho carvão profundo unindo tipografia suíça, pintura matérica a óleo e arquitetura brutalista em concreto.",
       "aspect_badge": "3:4 RETRATO"
     },
@@ -1011,7 +963,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)",
       "caption": "Diálogo entre paisagismo árido, arquitetura minimalista e curadoria de arte.",
       "aspect_badge": "3:4 RETRATO"
@@ -1027,7 +979,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)",
       "caption": "Continuidade visual de carrossel com precisão tipográfica e respiro espacial.",
       "aspect_badge": "3:4 RETRATO"
@@ -1043,7 +995,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA)",
       "caption": "Arquitetura esculpida na rocha bruta: permanência, peso e silêncio visual.",
       "aspect_badge": "3:4 RETRATO"
@@ -1059,7 +1011,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "CASA ROCHOSA — 02A (DESDOBRAMENTO)",
       "caption": "Desdobramento editorial sobre habitar obras de arte em escala monumental.",
       "aspect_badge": "3:4 RETRATO"
@@ -1075,7 +1027,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)",
       "caption": "Volume monolítico espelhado refletindo a topografia natural ao redor.",
       "aspect_badge": "3:4 RETRATO"
@@ -1091,7 +1043,7 @@
       "orient": "vertical",
       "category": "bureau",
       "subfolder": "08-10-2026 CAMPANHA",
-      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASAS COLECIONÁVEIS",
+      "series": "ATO 05 // CAMPANHA ARQUITETURA & CASES COLECIONÁVEIS",
       "title": "FACHADA ESPELHADA — 03A (DESDOBRAMENTO)",
       "caption": "Direção de arte comercial para posicionamento de alto padrão na Galeria Espectro.",
       "aspect_badge": "3:4 RETRATO"

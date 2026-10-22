@@ -1,0 +1,22 @@
+HYB — LOGOS CORRIGIDOS · PACOTE V1
+
+Este pacote foi reconstruído a partir da referência de logo aprovada pelo usuário.
+Não foi criado um monograma novo nem adicionada uma letra isolada não aprovada.
+
+CONTEÚDO
+1. HYB_logotipo_aprovado_* — palavra HYB isolada, extraída da referência.
+2. HYB_selo_sem_texto_circular_* — selo com círculo e HYB central, sem inscrições ao redor.
+3. HYB_selo_com_texto_circular_* — selo extraído da referência aprovada, com inscrições ao redor.
+4. REFERENCIA_APROVADA_original.png — cópia da referência usada.
+5. PREVIEW_LOGOS_HYB.jpg — prancha de visualização.
+
+SUFIXOS
+- transparente_preto: desenho preto com fundo transparente.
+- transparente_marfin: desenho marfim com fundo transparente.
+- fundo_marfin: desenho preto sobre marfim.
+- fundo_preto: desenho marfim sobre preto.
+- fundo_terracota: desenho marfim sobre terracota.
+- fundo_cinza: desenho preto sobre cinza.
+
+OBSERVAÇÃO
+As versões PNG derivam da imagem de referência aprovada. A versão “sem texto circular” mantém a palavra HYB central e o contorno circular, removendo as inscrições periféricas. Estes arquivos são raster PNG; não são vetores finais.
