@@ -2572,27 +2572,85 @@
       });
     }
 
-    // 3. Category Filtering
-    function filterCatalog(catKey) {
-      currentFilter = catKey;
-      document.querySelectorAll('[data-filter]').forEach(function(btn) {
-        btn.classList.toggle('active', btn.getAttribute('data-filter') === catKey);
+    // 3. Lookbook Bento Portal & Concentrated Drawer Controller
+    var currentOpenAct = null;
+
+    function openActPortal(actKey) {
+      if (actKey === 'revista_hyb') {
+        openMagazineReader(0);
+        return;
+      }
+
+      if (currentOpenAct === actKey) {
+        closeActDrawer();
+        return;
+      }
+
+      currentOpenAct = actKey;
+
+      // Update Bento Tile highlights
+      document.querySelectorAll('[data-bento-act]').forEach(function(tile) {
+        tile.classList.toggle('active-bento', tile.getAttribute('data-bento-act') === actKey);
       });
 
+      // Show drawer controller
+      var drawerControl = document.getElementById('actDrawerControl');
+      var drawerTitle = document.getElementById('drawerActTitle');
+      var actTitles = {
+        'shoes': 'ATO 02 // DESIGN DE CALÇADOS ESCULTÓRICOS',
+        'boys_lambe': 'ATO 03 // LAMBE-LAMBE URBANO',
+        'acervo_materico': 'ATO 04 // ÓLEO SOBRE LINHO CRU',
+        'bureau': 'ATO 05 // CASES MONOLÍTICOS ARQUITETÔNICOS'
+      };
+      if (drawerTitle) drawerTitle.textContent = actTitles[actKey] || 'ACERVO ABERTO';
+      if (drawerControl) drawerControl.style.display = 'block';
+
+      // Show only target act section
       document.querySelectorAll('[data-act-section]').forEach(function(sec) {
-        var secKey = sec.getAttribute('data-act-section');
-        if (catKey === 'all' || secKey === catKey) {
-          sec.classList.remove('hidden-act');
+        if (sec.getAttribute('data-act-section') === actKey) {
+          sec.classList.add('is-active-act');
+          sec.style.display = 'block';
         } else {
-          sec.classList.add('hidden-act');
+          sec.classList.remove('is-active-act');
+          sec.style.display = 'none';
         }
       });
 
-      if (catKey === 'all') {
-        currentFilteredWorks = [...ALL_WORKS];
-      } else {
-        currentFilteredWorks = ALL_WORKS.filter(function(w) { return w.cat === catKey; });
+      currentFilteredWorks = ALL_WORKS.filter(function(w) { return w.cat === actKey; });
+
+      var targetSec = document.querySelector('[data-act-section="' + actKey + '"]');
+      if (targetSec) {
+        targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+    }
+
+    function closeActDrawer() {
+      currentOpenAct = null;
+      document.querySelectorAll('[data-bento-act]').forEach(function(tile) {
+        tile.classList.remove('active-bento');
+      });
+      var drawerControl = document.getElementById('actDrawerControl');
+      if (drawerControl) drawerControl.style.display = 'none';
+      document.querySelectorAll('[data-act-section]').forEach(function(sec) {
+        sec.classList.remove('is-active-act');
+        sec.style.display = 'none';
+      });
+      currentFilteredWorks = [...ALL_WORKS];
+      var lookbookEl = document.getElementById('lookbook');
+      if (lookbookEl) lookbookEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function inspectCurrentAct() {
+      if (currentOpenAct && currentFilteredWorks.length) {
+        currentLightboxIndex = 0;
+        renderLightboxSlide();
+        document.getElementById('museumLightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function filterCatalog(catKey) {
+      openActPortal(catKey);
     }
 
     // 4. Lightbox & 24-Page Magazine Reader
@@ -2686,7 +2744,7 @@
     function montarTextoBriefing() {
       var mod = document.getElementById('modalidadeSelect').value;
       var ctx = document.getElementById('contextoInput').value.trim();
-      var msg = 'Olá, Henrique. Acessei o site oficial do Bureau Criativo Autoral e gostaria de solicitar informações sobre:\n\n• Modalidade: ' + mod;
+      var msg = 'Olá, Henrique. Acessei o site oficial do HYB — STUDIO e gostaria de solicitar informações sobre:\n\n• Modalidade: ' + mod;
       if (ctx) msg += '\n• Contexto / Projeto: ' + ctx;
       msg += '\n\nAguardo retorno para agendarmos uma conversa inicial.';
       return msg;
