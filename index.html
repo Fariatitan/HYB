@@ -625,6 +625,46 @@
       flex-wrap: wrap;
     }
 
+    /* Magazine Showcase Card (Full-width callout inside grid) */
+    .plate-magazine-card {
+      grid-column: 1 / -1;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      padding: clamp(32px, 5vw, 64px);
+      margin-top: clamp(20px, 3vh, 40px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .magazine-card__title {
+      font-family: var(--sans);
+      font-size: clamp(22px, 2.5vw, 36px);
+      font-weight: 300;
+      color: var(--fg);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .magazine-card__title em {
+      font-style: italic;
+      color: var(--paper);
+    }
+    .magazine-card__desc {
+      font-family: var(--sans);
+      font-size: clamp(14px, 1.2vw, 17px);
+      font-weight: 350;
+      color: var(--paper);
+      opacity: 0.85;
+      max-width: 720px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .magazine-card__actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
     /* Subseries Divider in Act 05 */
     .subseries-divider {
       grid-column: 1 / -1;
@@ -1243,15 +1283,15 @@
         <section class="act-sec" id="ato-revista_hyb" data-act-section="revista_hyb">
           <div class="act-head g" data-reveal>
             <div class="act-head__meta micro">
-              <span class="mono micro--acc">ATO 01</span> — HYB // ED.001 (24 PÁGINAS)
+              <span class="mono micro--acc">ATO 01</span> — HYB // PUBLICAÇÃO OFICIAL (24 PÁGINAS)
             </div>
             <div class="act-head__main">
               <h3 class="act-head__title">Revista HYB — <em>Late Night Tales</em></h3>
-              <p class="act-head__sub">Edição 001 integral: 24 lâminas oficiais em ordem cronológica de leitura + PDF completo.</p>
+              <p class="act-head__sub">Edição 001 integral com 24 páginas no leitor oficial de ateliê + download do PDF completo.</p>
             </div>
             <blockquote class="act-head__quote">
               “A tela exige velocidade. O ateliê exige permanência. Subvertemos a proporção efêmera do digital em lâminas de coleção.”
-              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">24 pranchas · assets/revista_hyb/</span>
+              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">24 páginas oficiais no leitor · 3 lâminas de destaque no feed</span>
             </blockquote>
           </div>
           
@@ -1267,269 +1307,47 @@
             
           <div class="lookbook-grid" data-grid-cat="revista_hyb">
             
-            <figure class="plate ed-col-solo-left orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_001" data-reveal data-view onclick="openMagazineReader(0)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES)">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/01_HYB_ED01_PAG_01_CAPA.png" alt="PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_001" data-reveal data-view onclick="openMagazineReader(0)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES)">
+                  <div class="plate__media">
+                    <img src="assets/revista_hyb/01_HYB_ED01_PAG_01_CAPA.png" alt="PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">01/24</span> PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">01/24</span> PÁGINA 01 / 24 — CAPA OFICIAL (LATE NIGHT TALES)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_002" data-reveal data-view onclick="openMagazineReader(1)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 02 / 24 — CONTRA-CAPA & EXPEDIENTE">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/02_HYB_ED01_PAG_02_CONTRA_CAPA.png" alt="PÁGINA 02 / 24 — CONTRA-CAPA & EXPEDIENTE — Henrique Taveira (DALLIDO.1988)" width="1080" height="1920" loading="lazy" decoding="async">
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_005" data-reveal data-view onclick="openMagazineReader(4)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL">
+                  <div class="plate__media">
+                    <img src="assets/revista_hyb/05_HYB_ED01_PAG_05_CACTO.png" alt="PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">05/24</span> PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">02/24</span> PÁGINA 02 / 24 — CONTRA-CAPA & EXPEDIENTE</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 1080×1920</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_003" data-reveal data-view onclick="openMagazineReader(2)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 03 / 24 — NOTA DO EDITOR (DALLIDO.1988)">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/03_HYB_ED01_PAG_03_NOTA_DO_EDITOR.png" alt="PÁGINA 03 / 24 — NOTA DO EDITOR (DALLIDO.1988) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_006" data-reveal data-view onclick="openMagazineReader(5)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL">
+                  <div class="plate__media">
+                    <img src="assets/revista_hyb/06_HYB_ED01_PAG_06_PROTEA.png" alt="PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">06/24</span> PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
+            <div class="plate-magazine-card" data-cat="revista_hyb" data-reveal>
+              <div class="magazine-card__inner">
+                <span class="micro mono micro--acc">EDIÇÃO INTEGRAL · 24 PÁGINAS HOMOLOGADAS</span>
+                <h4 class="magazine-card__title">Revista HYB — Edição 001 · <em>Late Night Tales</em></h4>
+                <p class="magazine-card__desc">A publicação completa reúne 24 pranchas originais integrando radiografia botânica, crônicas de ateliê, ensaios conceituais e cartazismo. Folheie a edição integral página por página no leitor interativo de ateliê ou baixe o PDF oficial.</p>
+                <div class="magazine-card__actions">
+                  <button type="button" class="btn-editorial btn-editorial--acc" onclick="openMagazineReader(0)">▶ Folhear Edição Completa (24 Páginas)</button>
+                  <a href="assets/revista_hyb/REVISTA_HYB_ED01_24_PAGINAS.pdf" target="_blank" rel="noopener" class="btn-editorial">⬇ Baixar PDF Oficial (24 Pág.) ↗</a>
+                </div>
               </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">03/24</span> PÁGINA 03 / 24 — NOTA DO EDITOR (DALLIDO.1988)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_004" data-reveal data-view onclick="openMagazineReader(3)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 04 / 24 — A FLOR DESOSSADA (ABERTURA)">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/04_HYB_ED01_PAG_04_A_FLOR_DESOSSADA.png" alt="PÁGINA 04 / 24 — A FLOR DESOSSADA (ABERTURA) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">04/24</span> PÁGINA 04 / 24 — A FLOR DESOSSADA (ABERTURA)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_005" data-reveal data-view onclick="openMagazineReader(4)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/05_HYB_ED01_PAG_05_CACTO.png" alt="PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">05/24</span> PÁGINA 05 / 24 — RAIO-X BOTÂNICO: CACTO ESTRUTURAL</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_006" data-reveal data-view onclick="openMagazineReader(5)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/06_HYB_ED01_PAG_06_PROTEA.png" alt="PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">06/24</span> PÁGINA 06 / 24 — RAIO-X BOTÂNICO: PROTEA IMPERIAL</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_007" data-reveal data-view onclick="openMagazineReader(6)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 07 / 24 — RAIO-X BOTÂNICO: BANANEIRA TROPICAL">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/07_HYB_ED01_PAG_07_BANANAS.png" alt="PÁGINA 07 / 24 — RAIO-X BOTÂNICO: BANANEIRA TROPICAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">07/24</span> PÁGINA 07 / 24 — RAIO-X BOTÂNICO: BANANEIRA TROPICAL</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_008" data-reveal data-view onclick="openMagazineReader(7)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 08 / 24 — RAIO-X BOTÂNICO: STRELITZIA REGINAE">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/08_HYB_ED01_PAG_08_REGINAE.png" alt="PÁGINA 08 / 24 — RAIO-X BOTÂNICO: STRELITZIA REGINAE — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">08/24</span> PÁGINA 08 / 24 — RAIO-X BOTÂNICO: STRELITZIA REGINAE</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_009" data-reveal data-view onclick="openMagazineReader(8)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 09 / 24 — RAIO-X BOTÂNICO: PAPOULA NOTURNA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/09_HYB_ED01_PAG_09_PAPOULA.png" alt="PÁGINA 09 / 24 — RAIO-X BOTÂNICO: PAPOULA NOTURNA — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">09/24</span> PÁGINA 09 / 24 — RAIO-X BOTÂNICO: PAPOULA NOTURNA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_010" data-reveal data-view onclick="openMagazineReader(9)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 10 / 24 — CADERNO SHOES: ABERTURA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/10_HYB_ED01_PAG_10.png" alt="PÁGINA 10 / 24 — CADERNO SHOES: ABERTURA — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">10/24</span> PÁGINA 10 / 24 — CADERNO SHOES: ABERTURA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_011" data-reveal data-view onclick="openMagazineReader(10)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 11 / 24 — CADERNO SHOES: LINHA DE FORÇA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/11_HYB_ED01_PAG_11.png" alt="PÁGINA 11 / 24 — CADERNO SHOES: LINHA DE FORÇA — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">11/24</span> PÁGINA 11 / 24 — CADERNO SHOES: LINHA DE FORÇA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_012" data-reveal data-view onclick="openMagazineReader(11)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 12 / 24 — CADERNO SHOES: PERFIL ESTRUTURAL">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/12_HYB_ED01_PAG_12.png" alt="PÁGINA 12 / 24 — CADERNO SHOES: PERFIL ESTRUTURAL — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">12/24</span> PÁGINA 12 / 24 — CADERNO SHOES: PERFIL ESTRUTURAL</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_013" data-reveal data-view onclick="openMagazineReader(12)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 13 / 24 — CADERNO SHOES: MATÉRIA & BRILHO">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/13_HYB_ED01_PAG_13.png" alt="PÁGINA 13 / 24 — CADERNO SHOES: MATÉRIA & BRILHO — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">13/24</span> PÁGINA 13 / 24 — CADERNO SHOES: MATÉRIA & BRILHO</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_014" data-reveal data-view onclick="openMagazineReader(13)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 14 / 24 — CADERNO SHOES: TENSÃO MECÂNICA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/14_HYB_ED01_PAG_14.png" alt="PÁGINA 14 / 24 — CADERNO SHOES: TENSÃO MECÂNICA — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">14/24</span> PÁGINA 14 / 24 — CADERNO SHOES: TENSÃO MECÂNICA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_015" data-reveal data-view onclick="openMagazineReader(14)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 15 / 24 — CADERNO SHOES: ENSAIO COMPLETO">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/15_HYB_ED01_PAG_15.png" alt="PÁGINA 15 / 24 — CADERNO SHOES: ENSAIO COMPLETO — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">15/24</span> PÁGINA 15 / 24 — CADERNO SHOES: ENSAIO COMPLETO</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_016" data-reveal data-view onclick="openMagazineReader(15)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 16 / 24 — CADERNO SHOES: FECHAMENTO">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/16_HYB_ED01_PAG_16.png" alt="PÁGINA 16 / 24 — CADERNO SHOES: FECHAMENTO — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">16/24</span> PÁGINA 16 / 24 — CADERNO SHOES: FECHAMENTO</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_017" data-reveal data-view onclick="openMagazineReader(16)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 17 / 24 — CRÔNICA DE ATELIÊ & NOITE">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/17_HYB_ED01_PAG_17.png" alt="PÁGINA 17 / 24 — CRÔNICA DE ATELIÊ & NOITE — Henrique Taveira (DALLIDO.1988)" width="1080" height="1920" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">17/24</span> PÁGINA 17 / 24 — CRÔNICA DE ATELIÊ & NOITE</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 1080×1920</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_018" data-reveal data-view onclick="openMagazineReader(17)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 18 / 24 — ENSAIO MACABÉA & IMAGEM">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/18_HYB_ED01_PAG_18.png" alt="PÁGINA 18 / 24 — ENSAIO MACABÉA & IMAGEM — Henrique Taveira (DALLIDO.1988)" width="1080" height="1920" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">18/24</span> PÁGINA 18 / 24 — ENSAIO MACABÉA & IMAGEM</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 1080×1920</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_019" data-reveal data-view onclick="openMagazineReader(18)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 19 / 24 — DÍPTICO DOCUMENTAL I: A MÁSCARA QUE CAIU NA FARIA LIMA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/19_HYB_ED01_PAG_19.png" alt="PÁGINA 19 / 24 — DÍPTICO DOCUMENTAL I: A MÁSCARA QUE CAIU NA FARIA LIMA — Henrique Taveira (DALLIDO.1988)" width="1080" height="1920" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">19/24</span> PÁGINA 19 / 24 — DÍPTICO DOCUMENTAL I: A MÁSCARA QUE CAIU NA FARIA LIMA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 1080×1920</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_020" data-reveal data-view onclick="openMagazineReader(19)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 20 / 24 — DÍPTICO DOCUMENTAL II: A ROSA BRANCA DE VERÔNICA">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/20_HYB_ED01_PAG_20.png" alt="PÁGINA 20 / 24 — DÍPTICO DOCUMENTAL II: A ROSA BRANCA DE VERÔNICA — Henrique Taveira (DALLIDO.1988)" width="1080" height="1920" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">20/24</span> PÁGINA 20 / 24 — DÍPTICO DOCUMENTAL II: A ROSA BRANCA DE VERÔNICA</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 1080×1920</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_021" data-reveal data-view onclick="openMagazineReader(20)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 21 / 24 — BOYS & A RUA: LAMBE-LAMBE I">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/21_HYB_ED01_PAG_21.png" alt="PÁGINA 21 / 24 — BOYS & A RUA: LAMBE-LAMBE I — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">21/24</span> PÁGINA 21 / 24 — BOYS & A RUA: LAMBE-LAMBE I</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_022" data-reveal data-view onclick="openMagazineReader(21)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 22 / 24 — BOYS & A RUA: LAMBE-LAMBE II">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/22_HYB_ED01_PAG_22.png" alt="PÁGINA 22 / 24 — BOYS & A RUA: LAMBE-LAMBE II — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">22/24</span> PÁGINA 22 / 24 — BOYS & A RUA: LAMBE-LAMBE II</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_023" data-reveal data-view onclick="openMagazineReader(22)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 23 / 24 — BOYS & A RUA: LAMBE-LAMBE III">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/23_HYB_ED01_PAG_23.png" alt="PÁGINA 23 / 24 — BOYS & A RUA: LAMBE-LAMBE III — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">23/24</span> PÁGINA 23 / 24 — BOYS & A RUA: LAMBE-LAMBE III</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-right orient-vertical" data-cat="revista_hyb" data-id="revista_hyb_024" data-reveal data-view onclick="openMagazineReader(23)" tabindex="0" role="button" aria-label="Inspecionar PÁGINA 24 / 24 — BOYS & A RUA: LAMBE-LAMBE IV (FECHAMENTO)">
-              <div class="plate__media">
-                <img src="assets/revista_hyb/24_HYB_ED01_PAG_24.png" alt="PÁGINA 24 / 24 — BOYS & A RUA: LAMBE-LAMBE IV (FECHAMENTO) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">24/24</span> PÁGINA 24 / 24 — BOYS & A RUA: LAMBE-LAMBE IV (FECHAMENTO)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
+            </div>
             
           </div>
         </section>
@@ -1552,160 +1370,160 @@
           
           <div class="lookbook-grid" data-grid-cat="shoes">
             
-            <figure class="plate ed-col-solo-left orient-square" data-cat="shoes" data-id="shoes_001" data-reveal data-view onclick="openLightboxById('shoes_001')" tabindex="0" role="button" aria-label="Inspecionar SHOES 2.0 — ARQUITETURA DE SALTO #05">
-              <div class="plate__media">
-                <img src="assets/shoes/001_SHOES_2.0_005.jpg" alt="SHOES 2.0 — ARQUITETURA DE SALTO #05 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-square" data-cat="shoes" data-id="shoes_001" data-reveal data-view onclick="openLightboxById('shoes_001')" tabindex="0" role="button" aria-label="Inspecionar SHOES 2.0 — ARQUITETURA DE SALTO #05">
+                  <div class="plate__media">
+                    <img src="assets/shoes/001_SHOES_2.0_005.jpg" alt="SHOES 2.0 — ARQUITETURA DE SALTO #05 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">01</span> SHOES 2.0 — ARQUITETURA DE SALTO #05</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">01</span> SHOES 2.0 — ARQUITETURA DE SALTO #05</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="shoes" data-id="shoes_002" data-reveal data-view onclick="openLightboxById('shoes_002')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 10">
-              <div class="plate__media">
-                <img src="assets/shoes/002_HYB_ED01_PAG_010.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 10 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="shoes" data-id="shoes_002" data-reveal data-view onclick="openLightboxById('shoes_002')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 10">
+                  <div class="plate__media">
+                    <img src="assets/shoes/002_HYB_ED01_PAG_010.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 10 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">02</span> CADERNO SHOES — PRANCHA EDITORIAL 10</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">02</span> CADERNO SHOES — PRANCHA EDITORIAL 10</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_003" data-reveal data-view onclick="openLightboxById('shoes_003')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 11">
-              <div class="plate__media">
-                <img src="assets/shoes/003_HYB_ED01_PAG_11.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 11 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_003" data-reveal data-view onclick="openLightboxById('shoes_003')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 11">
+                  <div class="plate__media">
+                    <img src="assets/shoes/003_HYB_ED01_PAG_11.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 11 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">03</span> CADERNO SHOES — PRANCHA EDITORIAL 11</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">03</span> CADERNO SHOES — PRANCHA EDITORIAL 11</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-vertical" data-cat="shoes" data-id="shoes_004" data-reveal data-view onclick="openLightboxById('shoes_004')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 12">
-              <div class="plate__media">
-                <img src="assets/shoes/004_HYB_ED01_PAG_12.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 12 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-vertical" data-cat="shoes" data-id="shoes_004" data-reveal data-view onclick="openLightboxById('shoes_004')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 12">
+                  <div class="plate__media">
+                    <img src="assets/shoes/004_HYB_ED01_PAG_12.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 12 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">04</span> CADERNO SHOES — PRANCHA EDITORIAL 12</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">04</span> CADERNO SHOES — PRANCHA EDITORIAL 12</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_005" data-reveal data-view onclick="openLightboxById('shoes_005')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 13">
-              <div class="plate__media">
-                <img src="assets/shoes/005_HYB_ED01_PAG_13.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 13 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-wide ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_005" data-reveal data-view onclick="openLightboxById('shoes_005')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 13">
+                  <div class="plate__media">
+                    <img src="assets/shoes/005_HYB_ED01_PAG_13.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 13 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">05</span> CADERNO SHOES — PRANCHA EDITORIAL 13</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">05</span> CADERNO SHOES — PRANCHA EDITORIAL 13</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-left orient-vertical" data-cat="shoes" data-id="shoes_006" data-reveal data-view onclick="openLightboxById('shoes_006')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 14">
-              <div class="plate__media">
-                <img src="assets/shoes/006_HYB_ED01_PAG_14.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 14 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-vertical" data-cat="shoes" data-id="shoes_006" data-reveal data-view onclick="openLightboxById('shoes_006')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 14">
+                  <div class="plate__media">
+                    <img src="assets/shoes/006_HYB_ED01_PAG_14.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 14 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">06</span> CADERNO SHOES — PRANCHA EDITORIAL 14</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">06</span> CADERNO SHOES — PRANCHA EDITORIAL 14</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="shoes" data-id="shoes_007" data-reveal data-view onclick="openLightboxById('shoes_007')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 15">
-              <div class="plate__media">
-                <img src="assets/shoes/007_HYB_ED01_PAG_15.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 15 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="shoes" data-id="shoes_007" data-reveal data-view onclick="openLightboxById('shoes_007')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 15">
+                  <div class="plate__media">
+                    <img src="assets/shoes/007_HYB_ED01_PAG_15.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 15 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">07</span> CADERNO SHOES — PRANCHA EDITORIAL 15</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">07</span> CADERNO SHOES — PRANCHA EDITORIAL 15</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_008" data-reveal data-view onclick="openLightboxById('shoes_008')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 16">
-              <div class="plate__media">
-                <img src="assets/shoes/008_HYB_ED01_PAG_16.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 16 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="shoes" data-id="shoes_008" data-reveal data-view onclick="openLightboxById('shoes_008')" tabindex="0" role="button" aria-label="Inspecionar CADERNO SHOES — PRANCHA EDITORIAL 16">
+                  <div class="plate__media">
+                    <img src="assets/shoes/008_HYB_ED01_PAG_16.png" alt="CADERNO SHOES — PRANCHA EDITORIAL 16 — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">08</span> CADERNO SHOES — PRANCHA EDITORIAL 16</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">08</span> CADERNO SHOES — PRANCHA EDITORIAL 16</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-square" data-cat="shoes" data-id="shoes_009" data-reveal data-view onclick="openLightboxById('shoes_009')" tabindex="0" role="button" aria-label="Inspecionar MARY JANE — ANATOMIA AJUSTADA">
-              <div class="plate__media">
-                <img src="assets/shoes/009_mary_jane_fitted_anatomy_1791685044423.jpg" alt="MARY JANE — ANATOMIA AJUSTADA — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-square" data-cat="shoes" data-id="shoes_009" data-reveal data-view onclick="openLightboxById('shoes_009')" tabindex="0" role="button" aria-label="Inspecionar MARY JANE — ANATOMIA AJUSTADA">
+                  <div class="plate__media">
+                    <img src="assets/shoes/009_mary_jane_fitted_anatomy_1791685044423.jpg" alt="MARY JANE — ANATOMIA AJUSTADA — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">09</span> MARY JANE — ANATOMIA AJUSTADA</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">09</span> MARY JANE — ANATOMIA AJUSTADA</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide ed-stagger orient-square" data-cat="shoes" data-id="shoes_010" data-reveal data-view onclick="openLightboxById('shoes_010')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I">
-              <div class="plate__media">
-                <img src="assets/shoes/010_ChatGPT_Image_10_de_out._de_2026_18_32_56.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I — Henrique Taveira (DALLIDO.1988)" width="1182" height="1330" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-wide ed-stagger orient-square" data-cat="shoes" data-id="shoes_010" data-reveal data-view onclick="openLightboxById('shoes_010')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I">
+                  <div class="plate__media">
+                    <img src="assets/shoes/010_ChatGPT_Image_10_de_out._de_2026_18_32_56.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I — Henrique Taveira (DALLIDO.1988)" width="1182" height="1330" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">10</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I</span>
+                    <span class="plate__spec mono">FORMATO NATIVO · 1182×1330</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">10</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL I</span>
-                <span class="plate__spec mono">FORMATO NATIVO · 1182×1330</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-left orient-square" data-cat="shoes" data-id="shoes_011" data-reveal data-view onclick="openLightboxById('shoes_011')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II">
-              <div class="plate__media">
-                <img src="assets/shoes/011_ChatGPT_Image_10_de_out._de_2026_20_03_28.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II — Henrique Taveira (DALLIDO.1988)" width="1180" height="1333" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-square" data-cat="shoes" data-id="shoes_011" data-reveal data-view onclick="openLightboxById('shoes_011')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II">
+                  <div class="plate__media">
+                    <img src="assets/shoes/011_ChatGPT_Image_10_de_out._de_2026_20_03_28.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II — Henrique Taveira (DALLIDO.1988)" width="1180" height="1333" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">11</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II</span>
+                    <span class="plate__spec mono">FORMATO NATIVO · 1180×1333</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">11</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL II</span>
-                <span class="plate__spec mono">FORMATO NATIVO · 1180×1333</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-horizontal" data-cat="shoes" data-id="shoes_012" data-reveal data-view onclick="openLightboxById('shoes_012')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III">
-              <div class="plate__media">
-                <img src="assets/shoes/012_ChatGPT_Image_10_de_out._de_2026_22_51_39.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-horizontal" data-cat="shoes" data-id="shoes_012" data-reveal data-view onclick="openLightboxById('shoes_012')" tabindex="0" role="button" aria-label="Inspecionar LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III">
+                  <div class="plate__media">
+                    <img src="assets/shoes/012_ChatGPT_Image_10_de_out._de_2026_22_51_39.png" alt="LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">12</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III</span>
+                    <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">12</span> LABORATÓRIO DE FORMA — ESTUDO ESCULTURAL III</span>
-                <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-square" data-cat="shoes" data-id="shoes_013" data-reveal data-view onclick="openLightboxById('shoes_013')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE SHOES 2.0 — PRANCHA #01">
-              <div class="plate__media">
-                <img src="assets/shoes/013_SHOES_2.0_001.jpg" alt="SÉRIE SHOES 2.0 — PRANCHA #01 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-square" data-cat="shoes" data-id="shoes_013" data-reveal data-view onclick="openLightboxById('shoes_013')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE SHOES 2.0 — PRANCHA #01">
+                  <div class="plate__media">
+                    <img src="assets/shoes/013_SHOES_2.0_001.jpg" alt="SÉRIE SHOES 2.0 — PRANCHA #01 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">13</span> SÉRIE SHOES 2.0 — PRANCHA #01</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">13</span> SÉRIE SHOES 2.0 — PRANCHA #01</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-square" data-cat="shoes" data-id="shoes_014" data-reveal data-view onclick="openLightboxById('shoes_014')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE SHOES 2.0 — PRANCHA #09">
-              <div class="plate__media">
-                <img src="assets/shoes/014_SHOES_2.0_009.jpg" alt="SÉRIE SHOES 2.0 — PRANCHA #09 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-square" data-cat="shoes" data-id="shoes_014" data-reveal data-view onclick="openLightboxById('shoes_014')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE SHOES 2.0 — PRANCHA #09">
+                  <div class="plate__media">
+                    <img src="assets/shoes/014_SHOES_2.0_009.jpg" alt="SÉRIE SHOES 2.0 — PRANCHA #09 — Henrique Taveira (DALLIDO.1988)" width="1024" height="1024" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">14</span> SÉRIE SHOES 2.0 — PRANCHA #09</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">14</span> SÉRIE SHOES 2.0 — PRANCHA #09</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1024×1024</span>
-              </figcaption>
-            </figure>
-            
           </div>
         </section>
         
@@ -1727,50 +1545,50 @@
           
           <div class="lookbook-grid" data-grid-cat="boys_lambe">
             
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_001" data-reveal data-view onclick="openLightboxById('boys_lambe_001')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21)">
-              <div class="plate__media">
-                <img src="assets/boys_lambe/HYB_ED01_PAG_21.png" alt="BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_001" data-reveal data-view onclick="openLightboxById('boys_lambe_001')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21)">
+                  <div class="plate__media">
+                    <img src="assets/boys_lambe/HYB_ED01_PAG_21.png" alt="BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">01</span> BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">01</span> BOYS & A RUA — LAMBE-LAMBE I (PÁG. 21)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_002" data-reveal data-view onclick="openLightboxById('boys_lambe_002')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22)">
-              <div class="plate__media">
-                <img src="assets/boys_lambe/HYB_ED01_PAG_22.png" alt="BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_002" data-reveal data-view onclick="openLightboxById('boys_lambe_002')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22)">
+                  <div class="plate__media">
+                    <img src="assets/boys_lambe/HYB_ED01_PAG_22.png" alt="BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">02</span> BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">02</span> BOYS & A RUA — LAMBE-LAMBE II (PÁG. 22)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_003" data-reveal data-view onclick="openLightboxById('boys_lambe_003')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23)">
-              <div class="plate__media">
-                <img src="assets/boys_lambe/HYB_ED01_PAG_23.png" alt="BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_003" data-reveal data-view onclick="openLightboxById('boys_lambe_003')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23)">
+                  <div class="plate__media">
+                    <img src="assets/boys_lambe/HYB_ED01_PAG_23.png" alt="BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">03</span> BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">03</span> BOYS & A RUA — LAMBE-LAMBE III (PÁG. 23)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_004" data-reveal data-view onclick="openLightboxById('boys_lambe_004')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24)">
-              <div class="plate__media">
-                <img src="assets/boys_lambe/HYB_ED01_PAG_24.png" alt="BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="boys_lambe" data-id="boys_lambe_004" data-reveal data-view onclick="openLightboxById('boys_lambe_004')" tabindex="0" role="button" aria-label="Inspecionar BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24)">
+                  <div class="plate__media">
+                    <img src="assets/boys_lambe/HYB_ED01_PAG_24.png" alt="BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24) — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">04</span> BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">04</span> BOYS & A RUA — LAMBE-LAMBE IV (PÁG. 24)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
           </div>
         </section>
         
@@ -1792,182 +1610,182 @@
           
           <div class="lookbook-grid" data-grid-cat="acervo_materico">
             
-            <figure class="plate ed-col-solo-left orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_001" data-reveal data-view onclick="openLightboxById('acervo_materico_001')" tabindex="0" role="button" aria-label="Inspecionar CORPO & IMPASTO — TENSÃO NOTURNA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/001_ChatGPT_Image_1_de_out._de_2026_01_57_35.png" alt="CORPO & IMPASTO — TENSÃO NOTURNA — Henrique Taveira (DALLIDO.1988)" width="1122" height="1402" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_001" data-reveal data-view onclick="openLightboxById('acervo_materico_001')" tabindex="0" role="button" aria-label="Inspecionar CORPO & IMPASTO — TENSÃO NOTURNA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/001_ChatGPT_Image_1_de_out._de_2026_01_57_35.png" alt="CORPO & IMPASTO — TENSÃO NOTURNA — Henrique Taveira (DALLIDO.1988)" width="1122" height="1402" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">01</span> CORPO & IMPASTO — TENSÃO NOTURNA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1122×1402</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">01</span> CORPO & IMPASTO — TENSÃO NOTURNA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1122×1402</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-square" data-cat="acervo_materico" data-id="acervo_materico_002" data-reveal data-view onclick="openLightboxById('acervo_materico_002')" tabindex="0" role="button" aria-label="Inspecionar ESTUDO DE PERFIL — TINTA VERMELHA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/002_ESTUDO_PERFIL_TINTA_VERMELHA.png" alt="ESTUDO DE PERFIL — TINTA VERMELHA — Henrique Taveira (DALLIDO.1988)" width="566" height="560" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-square" data-cat="acervo_materico" data-id="acervo_materico_002" data-reveal data-view onclick="openLightboxById('acervo_materico_002')" tabindex="0" role="button" aria-label="Inspecionar ESTUDO DE PERFIL — TINTA VERMELHA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/002_ESTUDO_PERFIL_TINTA_VERMELHA.png" alt="ESTUDO DE PERFIL — TINTA VERMELHA — Henrique Taveira (DALLIDO.1988)" width="566" height="560" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">02</span> ESTUDO DE PERFIL — TINTA VERMELHA</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 566×560</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">02</span> ESTUDO DE PERFIL — TINTA VERMELHA</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 566×560</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_003" data-reveal data-view onclick="openLightboxById('acervo_materico_003')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/004_ChatGPT_Image_28_de_set._de_2026_20_25_52.png" alt="SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_003" data-reveal data-view onclick="openLightboxById('acervo_materico_003')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/004_ChatGPT_Image_28_de_set._de_2026_20_25_52.png" alt="SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I — Henrique Taveira (DALLIDO.1988)" width="941" height="1672" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">03</span> SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">03</span> SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA I</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 941×1672</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_004" data-reveal data-view onclick="openLightboxById('acervo_materico_004')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/005_ChatGPT_Image_28_de_set._de_2026_21_07_36.png" alt="SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II — Henrique Taveira (DALLIDO.1988)" width="1672" height="941" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_004" data-reveal data-view onclick="openLightboxById('acervo_materico_004')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/005_ChatGPT_Image_28_de_set._de_2026_21_07_36.png" alt="SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II — Henrique Taveira (DALLIDO.1988)" width="1672" height="941" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">04</span> SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II</span>
+                    <span class="plate__spec mono">16:9 PANORÂMICO · 1672×941</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">04</span> SÉRIE A DANÇA — MOVIMENTO EM ESPÁTULA II</span>
-                <span class="plate__spec mono">16:9 PANORÂMICO · 1672×941</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_005" data-reveal data-view onclick="openLightboxById('acervo_materico_005')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/007_L1010570.jpg" alt="REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-wide ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_005" data-reveal data-view onclick="openLightboxById('acervo_materico_005')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/007_L1010570.jpg" alt="REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">05</span> REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA)</span>
+                    <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">05</span> REGISTRO DE ATELIÊ — L1010570 (MATÉRIA VIVA)</span>
-                <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-left orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_006" data-reveal data-view onclick="openLightboxById('acervo_materico_006')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/008_L1010571.jpg" alt="REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_006" data-reveal data-view onclick="openLightboxById('acervo_materico_006')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/008_L1010571.jpg" alt="REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">06</span> REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO)</span>
+                    <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">06</span> REGISTRO DE ATELIÊ — L1010571 (TOPOGRAFIA DO ÓLEO)</span>
-                <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_007" data-reveal data-view onclick="openLightboxById('acervo_materico_007')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/009_L1010576.jpg" alt="REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-a orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_007" data-reveal data-view onclick="openLightboxById('acervo_materico_007')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/009_L1010576.jpg" alt="REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA) — Henrique Taveira (DALLIDO.1988)" width="4320" height="2432" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">07</span> REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA)</span>
+                    <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">07</span> REGISTRO DE ATELIÊ — L1010576 (CORTE & CAMADA)</span>
-                <span class="plate__spec mono">16:9 PANORÂMICO · 4320×2432</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_008" data-reveal data-view onclick="openLightboxById('acervo_materico_008')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — ARQUITETURA DA NOITE I">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/010_ChatGPT_Image_28_de_set._de_2026_23_42_26.png" alt="SÉRIE A PISTA — ARQUITETURA DA NOITE I — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_008" data-reveal data-view onclick="openLightboxById('acervo_materico_008')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — ARQUITETURA DA NOITE I">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/010_ChatGPT_Image_28_de_set._de_2026_23_42_26.png" alt="SÉRIE A PISTA — ARQUITETURA DA NOITE I — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">08</span> SÉRIE A PISTA — ARQUITETURA DA NOITE I</span>
+                    <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">08</span> SÉRIE A PISTA — ARQUITETURA DA NOITE I</span>
-                <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_009" data-reveal data-view onclick="openLightboxById('acervo_materico_009')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — ARQUITETURA DA NOITE II">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/011_ChatGPT_Image_28_de_set._de_2026_23_46_32.png" alt="SÉRIE A PISTA — ARQUITETURA DA NOITE II — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_009" data-reveal data-view onclick="openLightboxById('acervo_materico_009')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — ARQUITETURA DA NOITE II">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/011_ChatGPT_Image_28_de_set._de_2026_23_46_32.png" alt="SÉRIE A PISTA — ARQUITETURA DA NOITE II — Henrique Taveira (DALLIDO.1988)" width="1448" height="1086" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">09</span> SÉRIE A PISTA — ARQUITETURA DA NOITE II</span>
+                    <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">09</span> SÉRIE A PISTA — ARQUITETURA DA NOITE II</span>
-                <span class="plate__spec mono">4:3 HORIZONTAL · 1448×1086</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide ed-stagger orient-square" data-cat="acervo_materico" data-id="acervo_materico_010" data-reveal data-view onclick="openLightboxById('acervo_materico_010')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/012_ChatGPT_Image_28_de_set._de_2026_23_50_21.png" alt="SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1) — Henrique Taveira (DALLIDO.1988)" width="1254" height="1254" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-wide ed-stagger orient-square" data-cat="acervo_materico" data-id="acervo_materico_010" data-reveal data-view onclick="openLightboxById('acervo_materico_010')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/012_ChatGPT_Image_28_de_set._de_2026_23_50_21.png" alt="SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1) — Henrique Taveira (DALLIDO.1988)" width="1254" height="1254" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">10</span> SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1)</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1254×1254</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">10</span> SÉRIE A PISTA — FRAGMENTO CENTRAL (1:1)</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1254×1254</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-left orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_011" data-reveal data-view onclick="openLightboxById('acervo_materico_011')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — VERTICALIDADE NOTURNA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/013_ChatGPT_Image_29_de_set._de_2026_00_35_41.png" alt="SÉRIE A PISTA — VERTICALIDADE NOTURNA — Henrique Taveira (DALLIDO.1988)" width="1122" height="1402" loading="lazy" decoding="async">
+                <figure class="plate ed-col-solo-left orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_011" data-reveal data-view onclick="openLightboxById('acervo_materico_011')" tabindex="0" role="button" aria-label="Inspecionar SÉRIE A PISTA — VERTICALIDADE NOTURNA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/013_ChatGPT_Image_29_de_set._de_2026_00_35_41.png" alt="SÉRIE A PISTA — VERTICALIDADE NOTURNA — Henrique Taveira (DALLIDO.1988)" width="1122" height="1402" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">11</span> SÉRIE A PISTA — VERTICALIDADE NOTURNA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1122×1402</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">11</span> SÉRIE A PISTA — VERTICALIDADE NOTURNA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1122×1402</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-full ed-strip orient-strip" data-cat="acervo_materico" data-id="acervo_materico_012" data-reveal data-view onclick="openLightboxById('acervo_materico_012')" tabindex="0" role="button" aria-label="Inspecionar DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/014_DALLIDO_1988_A_PISTA_BEHANCE.jpg" alt="DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA — Henrique Taveira (DALLIDO.1988)" width="1920" height="10864" loading="lazy" decoding="async">
-                <span class="strip-badge micro mono">PRANCHA LONGA BEHANCE · CLIQUE PARA EXPANDIR</span>
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">12</span> DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA</span>
-                <span class="plate__spec mono">PRANCHA CONTÍNUA · 1920×10864</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_013" data-reveal data-view onclick="openLightboxById('acervo_materico_013')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/015_L1010595.jpg" alt="REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO) — Henrique Taveira (DALLIDO.1988)" width="2048" height="1536" loading="lazy" decoding="async">
+                <figure class="plate ed-col-full ed-strip orient-strip" data-cat="acervo_materico" data-id="acervo_materico_012" data-reveal data-view onclick="openLightboxById('acervo_materico_012')" tabindex="0" role="button" aria-label="Inspecionar DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/014_DALLIDO_1988_A_PISTA_BEHANCE.jpg" alt="DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA — Henrique Taveira (DALLIDO.1988)" width="1920" height="10864" loading="lazy" decoding="async">
+                    <span class="strip-badge micro mono">PRANCHA LONGA BEHANCE · CLIQUE PARA EXPANDIR</span>
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">12</span> DOSSIÊ COMPLETO BEHANCE — SÉRIE A PISTA</span>
+                    <span class="plate__spec mono">PRANCHA CONTÍNUA · 1920×10864</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">13</span> REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO)</span>
-                <span class="plate__spec mono">4:3 HORIZONTAL · 2048×1536</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-narrow orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_014" data-reveal data-view onclick="openLightboxById('acervo_materico_014')" tabindex="0" role="button" aria-label="Inspecionar CURADORIA GALERIA ESPECTRO — A PISTA (4:5)">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/016_espectro-ig-1080x1440_5.png" alt="CURADORIA GALERIA ESPECTRO — A PISTA (4:5) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                <figure class="plate ed-col-pair-b ed-stagger orient-horizontal" data-cat="acervo_materico" data-id="acervo_materico_013" data-reveal data-view onclick="openLightboxById('acervo_materico_013')" tabindex="0" role="button" aria-label="Inspecionar REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/015_L1010595.jpg" alt="REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO) — Henrique Taveira (DALLIDO.1988)" width="2048" height="1536" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">13</span> REGISTRO DE ATELIÊ — L1010595 (OBRA EM PROCESSO)</span>
+                    <span class="plate__spec mono">4:3 HORIZONTAL · 2048×1536</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">14</span> CURADORIA GALERIA ESPECTRO — A PISTA (4:5)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-asym-wide ed-stagger orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_015" data-reveal data-view onclick="openLightboxById('acervo_materico_015')" tabindex="0" role="button" aria-label="Inspecionar AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/017_mockup-canvas-preto.jpg" alt="AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA — Henrique Taveira (DALLIDO.1988)" width="896" height="1200" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-narrow orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_014" data-reveal data-view onclick="openLightboxById('acervo_materico_014')" tabindex="0" role="button" aria-label="Inspecionar CURADORIA GALERIA ESPECTRO — A PISTA (4:5)">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/016_espectro-ig-1080x1440_5.png" alt="CURADORIA GALERIA ESPECTRO — A PISTA (4:5) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">14</span> CURADORIA GALERIA ESPECTRO — A PISTA (4:5)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">15</span> AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 896×1200</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-solo-left orient-square" data-cat="acervo_materico" data-id="acervo_materico_016" data-reveal data-view onclick="openLightboxById('acervo_materico_016')" tabindex="0" role="button" aria-label="Inspecionar ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA">
-              <div class="plate__media">
-                <img src="assets/acervo_materico/021_ChatGPT_Image_21_de_set._de_2026_08_03_09.png" alt="ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA — Henrique Taveira (DALLIDO.1988)" width="1312" height="1199" loading="lazy" decoding="async">
+                <figure class="plate ed-col-asym-wide ed-stagger orient-vertical" data-cat="acervo_materico" data-id="acervo_materico_015" data-reveal data-view onclick="openLightboxById('acervo_materico_015')" tabindex="0" role="button" aria-label="Inspecionar AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/017_mockup-canvas-preto.jpg" alt="AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA — Henrique Taveira (DALLIDO.1988)" width="896" height="1200" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">15</span> AMBIENTAÇÃO DE ACERVO — CANVAS EM MOLDURA PRETA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 896×1200</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">16</span> ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA</span>
-                <span class="plate__spec mono">1:1 QUADRADO · 1312×1199</span>
-              </figcaption>
-            </figure>
-            
+                <figure class="plate ed-col-solo-left orient-square" data-cat="acervo_materico" data-id="acervo_materico_016" data-reveal data-view onclick="openLightboxById('acervo_materico_016')" tabindex="0" role="button" aria-label="Inspecionar ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA">
+                  <div class="plate__media">
+                    <img src="assets/acervo_materico/021_ChatGPT_Image_21_de_set._de_2026_08_03_09.png" alt="ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA — Henrique Taveira (DALLIDO.1988)" width="1312" height="1199" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">16</span> ESTUDO AUTORAL — COMPOSIÇÃO MATÉRICA</span>
+                    <span class="plate__spec mono">1:1 QUADRADO · 1312×1199</span>
+                  </figcaption>
+                </figure>
+                
           </div>
         </section>
         
@@ -1983,339 +1801,323 @@
             </div>
             <blockquote class="act-head__quote">
               “Estratégia visual para marcas culturais, galerias e negócios autorais que recusam a estética descartável de linha de montagem.”
-              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">27 pranchas · assets/bureau/</span>
+              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">26 pranchas · assets/bureau/</span>
             </blockquote>
           </div>
           
           <div class="lookbook-grid" data-grid-cat="bureau">
             
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">00 // PEÇA MATRIZ</span>
-                      <span class="subseries-name">Monografia & Capa do Caderno de Branding</span>
-                    </div>
+                        <div class="subseries-divider" data-cat="bureau" data-reveal>
+                          <span class="micro mono micro--acc">SÉRIE 01 // 08-10-2026 CAMPANHA</span>
+                          <span class="subseries-name">Arquitetura Monolítica: Cactos (01/01A), Casa Rochosa (02/02A) & Fachada Espelhada (03/03A)</span>
+                        </div>
+                        
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_002" data-reveal data-view onclick="openLightboxById('bureau_002')" tabindex="0" role="button" aria-label="Inspecionar CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/cactos%2001.jpg" alt="CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-solo-center orient-vertical" data-cat="bureau" data-id="bureau_001" data-reveal data-view onclick="openLightboxById('bureau_001')" tabindex="0" role="button" aria-label="Inspecionar CADERNO DE BRANDING — HYB STUDIO (CAPA MONUMENTAL)">
-              <div class="plate__media">
-                <img src="assets/bureau/001_CAPA_CADERNO_DE_BRANDING_BUREAU_MONUMENTAL.jpg" alt="CADERNO DE BRANDING — HYB STUDIO (CAPA MONUMENTAL) — Henrique Taveira (DALLIDO.1988)" width="896" height="1200" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">01</span> CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">01</span> CADERNO DE BRANDING — HYB STUDIO (CAPA MONUMENTAL)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 896×1200</span>
-              </figcaption>
-            </figure>
-            
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">SÉRIE 01 // 08-10-2026 CAMPANHA</span>
-                      <span class="subseries-name">Arquitetura Monolítica: Cactos (01/01A), Casa Rochosa (02/02A) & Fachada Espelhada (03/03A)</span>
-                    </div>
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_003" data-reveal data-view onclick="openLightboxById('bureau_003')" tabindex="0" role="button" aria-label="Inspecionar CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/cactos%2001a.jpg" alt="CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_002" data-reveal data-view onclick="openLightboxById('bureau_002')" tabindex="0" role="button" aria-label="Inspecionar CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/cactos%2001.jpg" alt="CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">02</span> CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">02</span> CAMPANHA DESERTO & CONCRETO — 01 (MATRIZ CACTOS)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_003" data-reveal data-view onclick="openLightboxById('bureau_003')" tabindex="0" role="button" aria-label="Inspecionar CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/cactos%2001a.jpg" alt="CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">03</span> CAMPANHA DESERTO & CONCRETO — 01A (DESDOBRAMENTO)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_004" data-reveal data-view onclick="openLightboxById('bureau_004')" tabindex="0" role="button" aria-label="Inspecionar CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/rochosa%2002.jpg" alt="CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA) — Henrique Taveira (DALLIDO.1988)" width="1086" height="1448" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">04</span> CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1086×1448</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_005" data-reveal data-view onclick="openLightboxById('bureau_005')" tabindex="0" role="button" aria-label="Inspecionar CASA ROCHOSA — 02A (DESDOBRAMENTO)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/rochosa%2002a.jpg" alt="CASA ROCHOSA — 02A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">05</span> CASA ROCHOSA — 02A (DESDOBRAMENTO)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_006" data-reveal data-view onclick="openLightboxById('bureau_006')" tabindex="0" role="button" aria-label="Inspecionar FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/fachada%2003.jpg" alt="FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">06</span> FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_007" data-reveal data-view onclick="openLightboxById('bureau_007')" tabindex="0" role="button" aria-label="Inspecionar FACHADA ESPELHADA — 03A (DESDOBRAMENTO)">
-              <div class="plate__media">
-                <img src="assets/bureau/08-10-2026%20CAMPANHA/fachada%2003a.jpg" alt="FACHADA ESPELHADA — 03A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">07</span> FACHADA ESPELHADA — 03A (DESDOBRAMENTO)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">SÉRIE 02 // 2026-10-10-CARR FORMATOS</span>
-                      <span class="subseries-name">Engenharia de Escala & Proporções de Acervo (Lâminas 01 a 05)</span>
-                    </div>
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_004" data-reveal data-view onclick="openLightboxById('bureau_004')" tabindex="0" role="button" aria-label="Inspecionar CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/rochosa%2002.jpg" alt="CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA) — Henrique Taveira (DALLIDO.1988)" width="1086" height="1448" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-solo-left orient-vertical" data-cat="bureau" data-id="bureau_008" data-reveal data-view onclick="openLightboxById('bureau_008')" tabindex="0" role="button" aria-label="Inspecionar GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA)">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/01.jpg" alt="GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">03</span> CASA ROCHOSA — 02 (MATRIZ ARQUITETÔNICA)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1086×1448</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">08</span> GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_009" data-reveal data-view onclick="openLightboxById('bureau_009')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 02/05">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/02.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 02/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">09</span> SISTEMA DE PROPORÇÕES — LÂMINA 02/05</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_010" data-reveal data-view onclick="openLightboxById('bureau_010')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 03/05">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/03.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 03/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">10</span> SISTEMA DE PROPORÇÕES — LÂMINA 03/05</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_011" data-reveal data-view onclick="openLightboxById('bureau_011')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 04/05">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/04.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 04/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">11</span> SISTEMA DE PROPORÇÕES — LÂMINA 04/05</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_012" data-reveal data-view onclick="openLightboxById('bureau_012')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO)">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/05.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">12</span> SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO)</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">SÉRIE 03 // 2026-10-02-CARR THAIS</span>
-                      <span class="subseries-name">Ensaio Curatorial Thais — Galeria Espectro (Lâminas 01 a 04)</span>
-                    </div>
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_005" data-reveal data-view onclick="openLightboxById('bureau_005')" tabindex="0" role="button" aria-label="Inspecionar CASA ROCHOSA — 02A (DESDOBRAMENTO)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/rochosa%2002a.jpg" alt="CASA ROCHOSA — 02A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_013" data-reveal data-view onclick="openLightboxById('bureau_013')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 01/04">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-02-CARR%20THAIS/01.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 01/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">04</span> CASA ROCHOSA — 02A (DESDOBRAMENTO)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">13</span> ENSAIO CURATORIAL THAIS — LÂMINA 01/04</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_014" data-reveal data-view onclick="openLightboxById('bureau_014')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 02/04">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-02-CARR%20THAIS/02.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 02/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">14</span> ENSAIO CURATORIAL THAIS — LÂMINA 02/04</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_015" data-reveal data-view onclick="openLightboxById('bureau_015')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 03/04">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-02-CARR%20THAIS/03.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 03/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">15</span> ENSAIO CURATORIAL THAIS — LÂMINA 03/04</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_016" data-reveal data-view onclick="openLightboxById('bureau_016')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 04/04">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-02-CARR%20THAIS/04.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 04/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">16</span> ENSAIO CURATORIAL THAIS — LÂMINA 04/04</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">SÉRIE 04 // 2026-10-15-CARR HILMA DE DOMINGO</span>
-                      <span class="subseries-name">Repertório Cultural: The Ten Largest (1907) — Pares Obra em Moldura + Corte Editorial 3:4 (01 a 05)</span>
-                    </div>
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_006" data-reveal data-view onclick="openLightboxById('bureau_006')" tabindex="0" role="button" aria-label="Inspecionar FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/fachada%2003.jpg" alt="FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_017" data-reveal data-view onclick="openLightboxById('bureau_017')" tabindex="0" role="button" aria-label="Inspecionar POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2001%20-%20The%20Ten%20Largest%20No.%203%20-%20Youth%20-%201907.jpg" alt="POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">05</span> FACHADA ESPELHADA — 03 (MATRIZ MONOLÍTICA)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">17</span> POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_018" data-reveal data-view onclick="openLightboxById('bureau_018')" tabindex="0" role="button" aria-label="Inspecionar POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2001%20-1080x1440.png" alt="POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">18</span> POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_019" data-reveal data-view onclick="openLightboxById('bureau_019')" tabindex="0" role="button" aria-label="Inspecionar POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2002%20-%20The%20Ten%20Largest%20No.%205%20-%20Adulthood%20-%201907.jpg" alt="POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">19</span> POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_020" data-reveal data-view onclick="openLightboxById('bureau_020')" tabindex="0" role="button" aria-label="Inspecionar POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2002%20-1080x1440%20%281%29.png" alt="POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">20</span> POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_021" data-reveal data-view onclick="openLightboxById('bureau_021')" tabindex="0" role="button" aria-label="Inspecionar POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2003%20-%20The%20Ten%20Largest%20No.%206%20-%201907.jpg" alt="POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">21</span> POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_022" data-reveal data-view onclick="openLightboxById('bureau_022')" tabindex="0" role="button" aria-label="Inspecionar POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2003%20-1080x1440%20%282%29.png" alt="POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">22</span> POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_023" data-reveal data-view onclick="openLightboxById('bureau_023')" tabindex="0" role="button" aria-label="Inspecionar POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2004%20-%20The%20Ten%20Largest%20No.%207%20-%20Adulthood%20-%201907.jpg" alt="POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">23</span> POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_024" data-reveal data-view onclick="openLightboxById('bureau_024')" tabindex="0" role="button" aria-label="Inspecionar POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2004%20-1080x1440%20%282%29.png" alt="POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">24</span> POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_025" data-reveal data-view onclick="openLightboxById('bureau_025')" tabindex="0" role="button" aria-label="Inspecionar POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2005%20-%20The%20Ten%20Largest%20No.%208%20-%20Adulthood%20-%201907.jpg" alt="POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">25</span> POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
-              </figcaption>
-            </figure>
-            
-            <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_026" data-reveal data-view onclick="openLightboxById('bureau_026')" tabindex="0" role="button" aria-label="Inspecionar POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2005%20-1080x1440%20%282%29.png" alt="POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
-                
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">26</span> POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
-                <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
-              </figcaption>
-            </figure>
-            
-                    <div class="subseries-divider" data-cat="bureau" data-reveal>
-                      <span class="micro mono micro--acc">SÉRIE 05 // 2026-10-16-STORIES HILMA</span>
-                      <span class="subseries-name">Desdobramento Vertical 9:16 — Diálogos Galeria Espectro</span>
-                    </div>
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_007" data-reveal data-view onclick="openLightboxById('bureau_007')" tabindex="0" role="button" aria-label="Inspecionar FACHADA ESPELHADA — 03A (DESDOBRAMENTO)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/08-10-2026%20CAMPANHA/fachada%2003a.jpg" alt="FACHADA ESPELHADA — 03A (DESDOBRAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
                     
-            <figure class="plate ed-col-solo-right orient-vertical" data-cat="bureau" data-id="bureau_027" data-reveal data-view onclick="openLightboxById('bureau_027')" tabindex="0" role="button" aria-label="Inspecionar STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16)">
-              <div class="plate__media">
-                <img src="assets/bureau/2026-10-16-Stories%20hilma/WhatsApp%20Image%202026-10-15%20at%2018.39.04.jpeg" alt="STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16) — Henrique Taveira (DALLIDO.1988)" width="900" height="1600" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">06</span> FACHADA ESPELHADA — 03A (DESDOBRAMENTO)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
                 
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">27</span> STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16)</span>
-                <span class="plate__spec mono">9:16 VERTICAL · 900×1600</span>
-              </figcaption>
-            </figure>
-            
+                        <div class="subseries-divider" data-cat="bureau" data-reveal>
+                          <span class="micro mono micro--acc">SÉRIE 02 // 2026-10-10-CARR FORMATOS</span>
+                          <span class="subseries-name">Engenharia de Escala & Proporções de Acervo (Lâminas 01 a 05)</span>
+                        </div>
+                        
+                <figure class="plate ed-col-solo-left orient-vertical" data-cat="bureau" data-id="bureau_008" data-reveal data-view onclick="openLightboxById('bureau_008')" tabindex="0" role="button" aria-label="Inspecionar GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/01.jpg" alt="GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">07</span> GUIA DE FORMATOS & ESCALA — LÂMINA 01/05 (ABERTURA)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_009" data-reveal data-view onclick="openLightboxById('bureau_009')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 02/05">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/02.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 02/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">08</span> SISTEMA DE PROPORÇÕES — LÂMINA 02/05</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_010" data-reveal data-view onclick="openLightboxById('bureau_010')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 03/05">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/03.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 03/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">09</span> SISTEMA DE PROPORÇÕES — LÂMINA 03/05</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_011" data-reveal data-view onclick="openLightboxById('bureau_011')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 04/05">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/04.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 04/05 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">10</span> SISTEMA DE PROPORÇÕES — LÂMINA 04/05</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_012" data-reveal data-view onclick="openLightboxById('bureau_012')" tabindex="0" role="button" aria-label="Inspecionar SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-10-CARR%20FORMATOS/05.png" alt="SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO) — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">11</span> SISTEMA DE PROPORÇÕES — LÂMINA 05/05 (FECHAMENTO)</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                        <div class="subseries-divider" data-cat="bureau" data-reveal>
+                          <span class="micro mono micro--acc">SÉRIE 03 // 2026-10-02-CARR THAIS</span>
+                          <span class="subseries-name">Ensaio Curatorial Thais — Galeria Espectro (Lâminas 01 a 04)</span>
+                        </div>
+                        
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_013" data-reveal data-view onclick="openLightboxById('bureau_013')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 01/04">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-02-CARR%20THAIS/01.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 01/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">12</span> ENSAIO CURATORIAL THAIS — LÂMINA 01/04</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_014" data-reveal data-view onclick="openLightboxById('bureau_014')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 02/04">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-02-CARR%20THAIS/02.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 02/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">13</span> ENSAIO CURATORIAL THAIS — LÂMINA 02/04</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-b ed-stagger orient-vertical" data-cat="bureau" data-id="bureau_015" data-reveal data-view onclick="openLightboxById('bureau_015')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 03/04">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-02-CARR%20THAIS/03.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 03/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">14</span> ENSAIO CURATORIAL THAIS — LÂMINA 03/04</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-pair-a orient-vertical" data-cat="bureau" data-id="bureau_016" data-reveal data-view onclick="openLightboxById('bureau_016')" tabindex="0" role="button" aria-label="Inspecionar ENSAIO CURATORIAL THAIS — LÂMINA 04/04">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-02-CARR%20THAIS/04.png" alt="ENSAIO CURATORIAL THAIS — LÂMINA 04/04 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">15</span> ENSAIO CURATORIAL THAIS — LÂMINA 04/04</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                        <div class="subseries-divider" data-cat="bureau" data-reveal>
+                          <span class="micro mono micro--acc">SÉRIE 04 // 2026-10-15-CARR HILMA DE DOMINGO</span>
+                          <span class="subseries-name">Repertório Cultural: The Ten Largest (1907) — Pares Obra em Moldura + Corte Editorial 3:4 (01 a 05)</span>
+                        </div>
+                        
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_017" data-reveal data-view onclick="openLightboxById('bureau_017')" tabindex="0" role="button" aria-label="Inspecionar POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2001%20-%20The%20Ten%20Largest%20No.%203%20-%20Youth%20-%201907.jpg" alt="POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">16</span> POST 01A — THE TEN LARGEST NO. 3 (YOUTH, 1907) · OBRA EM MOLDURA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_018" data-reveal data-view onclick="openLightboxById('bureau_018')" tabindex="0" role="button" aria-label="Inspecionar POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2001%20-1080x1440.png" alt="POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">17</span> POST 01B — THE TEN LARGEST NO. 3 (YOUTH, 1907) · CORTE EDITORIAL 3:4</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_019" data-reveal data-view onclick="openLightboxById('bureau_019')" tabindex="0" role="button" aria-label="Inspecionar POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2002%20-%20The%20Ten%20Largest%20No.%205%20-%20Adulthood%20-%201907.jpg" alt="POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">18</span> POST 02A — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_020" data-reveal data-view onclick="openLightboxById('bureau_020')" tabindex="0" role="button" aria-label="Inspecionar POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2002%20-1080x1440%20%281%29.png" alt="POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">19</span> POST 02B — THE TEN LARGEST NO. 5 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_021" data-reveal data-view onclick="openLightboxById('bureau_021')" tabindex="0" role="button" aria-label="Inspecionar POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2003%20-%20The%20Ten%20Largest%20No.%206%20-%201907.jpg" alt="POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">20</span> POST 03A — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_022" data-reveal data-view onclick="openLightboxById('bureau_022')" tabindex="0" role="button" aria-label="Inspecionar POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2003%20-1080x1440%20%282%29.png" alt="POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">21</span> POST 03B — THE TEN LARGEST NO. 6 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_023" data-reveal data-view onclick="openLightboxById('bureau_023')" tabindex="0" role="button" aria-label="Inspecionar POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2004%20-%20The%20Ten%20Largest%20No.%207%20-%20Adulthood%20-%201907.jpg" alt="POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">22</span> POST 04A — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_024" data-reveal data-view onclick="openLightboxById('bureau_024')" tabindex="0" role="button" aria-label="Inspecionar POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2004%20-1080x1440%20%282%29.png" alt="POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">23</span> POST 04B — THE TEN LARGEST NO. 7 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-b orient-vertical" data-cat="bureau" data-id="bureau_025" data-reveal data-view onclick="openLightboxById('bureau_025')" tabindex="0" role="button" aria-label="Inspecionar POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2005%20-%20The%20Ten%20Largest%20No.%208%20-%20Adulthood%20-%201907.jpg" alt="POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA — Henrique Taveira (DALLIDO.1988)" width="1792" height="2400" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">24</span> POST 05A — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · OBRA EM MOLDURA</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1792×2400</span>
+                  </figcaption>
+                </figure>
+                
+                <figure class="plate ed-col-spread-a orient-vertical" data-cat="bureau" data-id="bureau_026" data-reveal data-view onclick="openLightboxById('bureau_026')" tabindex="0" role="button" aria-label="Inspecionar POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-15-CARR%20hilma%20de%20domingo/POST%2005%20-1080x1440%20%282%29.png" alt="POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4 — Henrique Taveira (DALLIDO.1988)" width="1080" height="1440" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">25</span> POST 05B — THE TEN LARGEST NO. 8 (ADULTHOOD, 1907) · CORTE EDITORIAL 3:4</span>
+                    <span class="plate__spec mono">3:4 RETRATO · 1080×1440</span>
+                  </figcaption>
+                </figure>
+                
+                        <div class="subseries-divider" data-cat="bureau" data-reveal>
+                          <span class="micro mono micro--acc">SÉRIE 05 // 2026-10-16-STORIES HILMA</span>
+                          <span class="subseries-name">Desdobramento Vertical 9:16 — Diálogos Galeria Espectro</span>
+                        </div>
+                        
+                <figure class="plate ed-col-solo-right orient-vertical" data-cat="bureau" data-id="bureau_027" data-reveal data-view onclick="openLightboxById('bureau_027')" tabindex="0" role="button" aria-label="Inspecionar STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16)">
+                  <div class="plate__media">
+                    <img src="assets/bureau/2026-10-16-Stories%20hilma/WhatsApp%20Image%202026-10-15%20at%2018.39.04.jpeg" alt="STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16) — Henrique Taveira (DALLIDO.1988)" width="900" height="1600" loading="lazy" decoding="async">
+                    
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">26</span> STORIES HILMA AF KLINT — DIÁLOGOS GALERIA ESPECTRO (9:16)</span>
+                    <span class="plate__spec mono">9:16 VERTICAL · 900×1600</span>
+                  </figcaption>
+                </figure>
+                
           </div>
         </section>
         

@@ -325,9 +325,9 @@ act_configs = [
     {
         "key": "revista_hyb",
         "num": "ATO 01",
-        "code": "HYB // ED.001 (24 PÁGINAS)",
+        "code": "HYB // PUBLICAÇÃO OFICIAL (24 PÁGINAS)",
         "title": "Revista HYB — <em>Late Night Tales</em>",
-        "subtitle": "Edição 001 integral: 24 lâminas oficiais em ordem cronológica de leitura + PDF completo.",
+        "subtitle": "Edição 001 integral com 24 páginas no leitor oficial de ateliê + download do PDF completo.",
         "quote": "“A tela exige velocidade. O ateliê exige permanência. Subvertemos a proporção efêmera do digital em lâminas de coleção.”",
         "source_path": "assets/revista_hyb/"
     },
@@ -402,14 +402,12 @@ def get_editorial_col_class(cat_key: str, local_i: int, orient: str, subfolder: 
         patterns = ["ed-col-pair-a", "ed-col-pair-b ed-stagger", "ed-col-spread-a", "ed-col-spread-b"]
         return patterns[(local_i - 1) % 4]
     elif cat_key == "bureau":
-        if local_i == 1:
-            return "ed-col-solo-center"
-        elif "CAMPANHA" in subfolder or "hilma de domingo" in subfolder:
+        if "CAMPANHA" in subfolder or "hilma de domingo" in subfolder:
             # Strict paired spreads (Matrix + Unfolding / Framed Painting + 3:4 Detail Crop)
-            return "ed-col-spread-a" if (local_i % 2 == 0) else "ed-col-spread-b"
+            return "ed-col-spread-a" if (local_i % 2 == 1) else "ed-col-spread-b"
         elif "FORMATOS" in subfolder:
             # 5-slide carousel: 1 hero + 2 pairs
-            if local_i == 8:
+            if local_i == 7:
                 return "ed-col-solo-left"
             return "ed-col-pair-a" if (local_i % 2 == 1) else "ed-col-pair-b ed-stagger"
         elif "THAIS" in subfolder:
@@ -441,50 +439,88 @@ def build_acts_html():
         plates_html = []
         current_subgroup = None
 
-        for local_i, item in enumerate(items, start=1):
-            if key == "bureau":
-                sub = item["subfolder"]
-                if sub != current_subgroup:
-                    current_subgroup = sub
-                    sub_titles = {
-                        "bureau": ("00 // PEÇA MATRIZ", "Monografia & Capa do Caderno de Branding"),
-                        "08-10-2026 CAMPANHA": ("SÉRIE 01 // 08-10-2026 CAMPANHA", "Arquitetura Monolítica: Cactos (01/01A), Casa Rochosa (02/02A) & Fachada Espelhada (03/03A)"),
-                        "2026-10-10-CARR FORMATOS": ("SÉRIE 02 // 2026-10-10-CARR FORMATOS", "Engenharia de Escala & Proporções de Acervo (Lâminas 01 a 05)"),
-                        "2026-10-02-CARR THAIS": ("SÉRIE 03 // 2026-10-02-CARR THAIS", "Ensaio Curatorial Thais — Galeria Espectro (Lâminas 01 a 04)"),
-                        "2026-10-15-CARR hilma de domingo": ("SÉRIE 04 // 2026-10-15-CARR HILMA DE DOMINGO", "Repertório Cultural: The Ten Largest (1907) — Pares Obra em Moldura + Corte Editorial 3:4 (01 a 05)"),
-                        "2026-10-16-Stories hilma": ("SÉRIE 05 // 2026-10-16-STORIES HILMA", "Desdobramento Vertical 9:16 — Diálogos Galeria Espectro")
-                    }
-                    st_kicker, st_name = sub_titles.get(sub, (f"SÉRIE // {sub.upper()}", "Ativos Curados HYB Studio"))
-                    plates_html.append(f'''
-                    <div class="subseries-divider" data-cat="{key}" data-reveal>
-                      <span class="micro mono micro--acc">{st_kicker}</span>
-                      <span class="subseries-name">{st_name}</span>
-                    </div>
-                    ''')
+        if key == "revista_hyb":
+            # Curation Zara: Display 3 iconic plates on the scroll (Cover + Botanical X-Ray diptych),
+            # plus an editorial invitation card for the full 24-page interactive reader.
+            # This completely avoids repeating Shoes and Boys Lambe, preserving total novel discovery.
+            hyb_showcase_indices = [0, 4, 5]  # Page 01 (Cover), Page 05 (Cacto), Page 06 (Protea)
+            for s_idx, cat_idx in enumerate(hyb_showcase_indices, start=1):
+                item = items[cat_idx]
+                ed_class = "ed-col-solo-left" if s_idx == 1 else ("ed-col-spread-a" if s_idx == 2 else "ed-col-spread-b")
+                orient_class = f"orient-{item['orient']}"
+                num_str = f"{cat_idx + 1:02d}/24"
+                click_handler = f"openMagazineReader({cat_idx})"
 
-            ed_class = get_editorial_col_class(key, local_i, item['orient'], item['subfolder'])
-            orient_class = f"orient-{item['orient']}"
-            strip_badge = '<span class="strip-badge micro mono">PRANCHA LONGA BEHANCE · CLIQUE PARA EXPANDIR</span>' if item['orient'] == 'strip' else ''
+                plates_html.append(f'''
+                <figure class="plate {ed_class} {orient_class}" data-cat="{key}" data-id="{item['id']}" data-reveal data-view onclick="{click_handler}" tabindex="0" role="button" aria-label="Inspecionar {item['title']}">
+                  <div class="plate__media">
+                    <img src="{item['url']}" alt="{item['title']} — Henrique Taveira (DALLIDO.1988)" width="{item['w']}" height="{item['h']}" loading="lazy" decoding="async">
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">{num_str}</span> {item['title']}</span>
+                    <span class="plate__spec mono">{item['aspect_badge']} · {item['w']}×{item['h']}</span>
+                  </figcaption>
+                </figure>
+                ''')
 
-            if key == "revista_hyb":
-                num_str = f"{local_i:02d}/24"
-                click_handler = f"openMagazineReader({local_i - 1})"
-            else:
+            # Append the monumental 24-page reader showcase card
+            plates_html.append(f'''
+            <div class="plate-magazine-card" data-cat="{key}" data-reveal>
+              <div class="magazine-card__inner">
+                <span class="micro mono micro--acc">EDIÇÃO INTEGRAL · 24 PÁGINAS HOMOLOGADAS</span>
+                <h4 class="magazine-card__title">Revista HYB — Edição 001 · <em>Late Night Tales</em></h4>
+                <p class="magazine-card__desc">A publicação completa reúne 24 pranchas originais integrando radiografia botânica, crônicas de ateliê, ensaios conceituais e cartazismo. Folheie a edição integral página por página no leitor interativo de ateliê ou baixe o PDF oficial.</p>
+                <div class="magazine-card__actions">
+                  <button type="button" class="btn-editorial btn-editorial--acc" onclick="openMagazineReader(0)">▶ Folhear Edição Completa (24 Páginas)</button>
+                  <a href="{hyb_pdf_url}" target="_blank" rel="noopener" class="btn-editorial">⬇ Baixar PDF Oficial (24 Pág.) ↗</a>
+                </div>
+              </div>
+            </div>
+            ''')
+            spec_quote_count = "24 páginas oficiais no leitor · 3 lâminas de destaque no feed"
+        else:
+            # For bureau, skip bureau_001 because it already crowns the website in the Hero header
+            items_to_render = [it for it in items if not (key == "bureau" and it["id"] == "bureau_001")]
+
+            for local_i, item in enumerate(items_to_render, start=1):
+                if key == "bureau":
+                    sub = item["subfolder"]
+                    if sub != current_subgroup:
+                        current_subgroup = sub
+                        sub_titles = {
+                            "08-10-2026 CAMPANHA": ("SÉRIE 01 // 08-10-2026 CAMPANHA", "Arquitetura Monolítica: Cactos (01/01A), Casa Rochosa (02/02A) & Fachada Espelhada (03/03A)"),
+                            "2026-10-10-CARR FORMATOS": ("SÉRIE 02 // 2026-10-10-CARR FORMATOS", "Engenharia de Escala & Proporções de Acervo (Lâminas 01 a 05)"),
+                            "2026-10-02-CARR THAIS": ("SÉRIE 03 // 2026-10-02-CARR THAIS", "Ensaio Curatorial Thais — Galeria Espectro (Lâminas 01 a 04)"),
+                            "2026-10-15-CARR hilma de domingo": ("SÉRIE 04 // 2026-10-15-CARR HILMA DE DOMINGO", "Repertório Cultural: The Ten Largest (1907) — Pares Obra em Moldura + Corte Editorial 3:4 (01 a 05)"),
+                            "2026-10-16-Stories hilma": ("SÉRIE 05 // 2026-10-16-STORIES HILMA", "Desdobramento Vertical 9:16 — Diálogos Galeria Espectro")
+                        }
+                        st_kicker, st_name = sub_titles.get(sub, (f"SÉRIE // {sub.upper()}", "Ativos Curados HYB Studio"))
+                        plates_html.append(f'''
+                        <div class="subseries-divider" data-cat="{key}" data-reveal>
+                          <span class="micro mono micro--acc">{st_kicker}</span>
+                          <span class="subseries-name">{st_name}</span>
+                        </div>
+                        ''')
+
+                ed_class = get_editorial_col_class(key, local_i, item['orient'], item['subfolder'])
+                orient_class = f"orient-{item['orient']}"
+                strip_badge = '<span class="strip-badge micro mono">PRANCHA LONGA BEHANCE · CLIQUE PARA EXPANDIR</span>' if item['orient'] == 'strip' else ''
                 num_str = f"{local_i:02d}"
                 click_handler = f"openLightboxById('{item['id']}')"
 
-            plates_html.append(f'''
-            <figure class="plate {ed_class} {orient_class}" data-cat="{key}" data-id="{item['id']}" data-reveal data-view onclick="{click_handler}" tabindex="0" role="button" aria-label="Inspecionar {item['title']}">
-              <div class="plate__media">
-                <img src="{item['url']}" alt="{item['title']} — Henrique Taveira (DALLIDO.1988)" width="{item['w']}" height="{item['h']}" loading="lazy" decoding="async">
-                {strip_badge}
-              </div>
-              <figcaption class="plate__cap micro">
-                <span class="plate__title"><span class="mono micro--acc">{num_str}</span> {item['title']}</span>
-                <span class="plate__spec mono">{item['aspect_badge']} · {item['w']}×{item['h']}</span>
-              </figcaption>
-            </figure>
-            ''')
+                plates_html.append(f'''
+                <figure class="plate {ed_class} {orient_class}" data-cat="{key}" data-id="{item['id']}" data-reveal data-view onclick="{click_handler}" tabindex="0" role="button" aria-label="Inspecionar {item['title']}">
+                  <div class="plate__media">
+                    <img src="{item['url']}" alt="{item['title']} — Henrique Taveira (DALLIDO.1988)" width="{item['w']}" height="{item['h']}" loading="lazy" decoding="async">
+                    {strip_badge}
+                  </div>
+                  <figcaption class="plate__cap micro">
+                    <span class="plate__title"><span class="mono micro--acc">{num_str}</span> {item['title']}</span>
+                    <span class="plate__spec mono">{item['aspect_badge']} · {item['w']}×{item['h']}</span>
+                  </figcaption>
+                </figure>
+                ''')
+            spec_quote_count = f"{len(items_to_render)} pranchas · {act['source_path']}"
 
         hyb_reader_bar = ""
         if key == "revista_hyb":
@@ -512,7 +548,7 @@ def build_acts_html():
             </div>
             <blockquote class="act-head__quote">
               {act['quote']}
-              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">{count} pranchas · {act['source_path']}</span>
+              <span class="micro mono" style="display:block;margin-top:10px;font-style:normal">{spec_quote_count}</span>
             </blockquote>
           </div>
           {hyb_reader_bar}
@@ -1177,6 +1213,46 @@ html_document = f'''<!DOCTYPE html>
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+    }}
+
+    /* Magazine Showcase Card (Full-width callout inside grid) */
+    .plate-magazine-card {{
+      grid-column: 1 / -1;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      padding: clamp(32px, 5vw, 64px);
+      margin-top: clamp(20px, 3vh, 40px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }}
+    .magazine-card__title {{
+      font-family: var(--sans);
+      font-size: clamp(22px, 2.5vw, 36px);
+      font-weight: 300;
+      color: var(--fg);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }}
+    .magazine-card__title em {{
+      font-style: italic;
+      color: var(--paper);
+    }}
+    .magazine-card__desc {{
+      font-family: var(--sans);
+      font-size: clamp(14px, 1.2vw, 17px);
+      font-weight: 350;
+      color: var(--paper);
+      opacity: 0.85;
+      max-width: 720px;
+      line-height: 1.6;
+      margin: 0;
+    }}
+    .magazine-card__actions {{
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
     }}
 
     /* Subseries Divider in Act 05 */
