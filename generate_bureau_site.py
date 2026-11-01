@@ -1987,45 +1987,54 @@ html_document = f'''<!DOCTYPE html>
     <blockquote class="manifesto__quote" data-reveal>“A diferenciação não está no discurso: está no portfólio, na qualidade do raciocínio, na linguagem, na coerência entre conceito e execução e na clareza de processo.”</blockquote>
   </section>
 
-  <!-- 03. ESCOPOS (MONOLITHIC ZARA-GRADE ROWS) -->
+  <!-- 03. ESCOPOS (MATRIZ CANÔNICA DE 5 PILARES HYB STUDIO V2.2) -->
   <section class="sec scopes-monolith" id="escopos">
     <div class="scopes-topline" data-reveal>
-      <span class="micro mono micro--acc">ESCOPOS</span>
+      <span class="micro mono micro--acc">03 — ESCOPOS DE ATUAÇÃO &amp; PILARES DE ATELIÊ</span>
       <div class="scopes-rule"></div>
     </div>
     <div class="scopes-list">
-      <div class="scope-row" data-reveal onclick="selectServiceModalidade('01. Diagnóstico de Comunicação')">
+      <div class="scope-row" data-reveal onclick="selectServiceModalidade('01. Engenharia Digital & E-commerce Autoral')">
         <span class="scope-num">01</span>
         <div class="scope-info">
-          <h3 class="scope-name">Diagnóstico de Comunicação</h3>
-          <p class="scope-sub">Auditoria estratégica de linguagem e posicionamento.</p>
+          <h3 class="scope-name">Engenharia Digital &amp; E-commerce Autoral</h3>
+          <p class="scope-sub">Lojas virtuais de alto luxo (Shopify/Tray/Nuvemshop) e plataformas institucionais B2B com CMS sob medida, SEO técnico de alta velocidade e checkout sem atrito.</p>
         </div>
         <span class="scope-action micro mono">CONSULTAR ↗</span>
       </div>
 
-      <div class="scope-row" data-reveal onclick="selectServiceModalidade('02. Estratégia & Direção Criativa')">
+      <div class="scope-row" data-reveal onclick="selectServiceModalidade('02. Branding & Sistemas de Identidade Visual')">
         <span class="scope-num">02</span>
         <div class="scope-info">
-          <h3 class="scope-name">Estratégia Criativa &amp; DNA</h3>
-          <p class="scope-sub">Construção de identidade e território de marca.</p>
+          <h3 class="scope-name">Branding &amp; Sistemas de Identidade Visual</h3>
+          <p class="scope-sub">Diagnóstico estratégico de posicionamento, tese de pricing power, Manual Vivo de DNA e sistema tipográfico para marcas que recusam o genérico.</p>
         </div>
         <span class="scope-action micro mono">CONSULTAR ↗</span>
       </div>
 
-      <div class="scope-row" data-reveal onclick="selectServiceModalidade('03. Conteúdo & Presença Digital')">
+      <div class="scope-row" data-reveal onclick="selectServiceModalidade('03. Publishing Digital & Design Editorial')">
         <span class="scope-num">03</span>
         <div class="scope-info">
-          <h3 class="scope-name">Retainer Editorial de Conteúdo</h3>
-          <p class="scope-sub">Direção contínua de imagem, texto e publicação.</p>
+          <h3 class="scope-name">Publishing Digital &amp; Design Editorial Transmídia</h3>
+          <p class="scope-sub">Revistas digitais verticais nativas 9:16 para Stories e iPad (com retenção auditada de 64,3%), lookbooks de moda e catálogos para impressão fine art.</p>
         </div>
         <span class="scope-action micro mono">CONSULTAR ↗</span>
       </div>
 
-      <div class="scope-row" data-reveal onclick="selectServiceModalidade('04. HYB Integrado')">
+      <div class="scope-row" data-reveal onclick="selectServiceModalidade('04. Conteúdo Revolver & Ghostwriting Executivo')">
         <span class="scope-num">04</span>
         <div class="scope-info">
-          <h3 class="scope-name">Direção Integrada HYB</h3>
-          <p class="scope-sub">Estrutura completa de direção criativa e estratégia.</p>
+          <h3 class="scope-name">Conteúdo Revolver &amp; Ghostwriting Executivo</h3>
+          <p class="scope-sub">Retainers de presença editorial contínua, esteira densa para lideranças (LinkedIn/Instagram) e HYB Integrado como Diretor Criativo contínuo.</p>
+        </div>
+        <span class="scope-action micro mono">CONSULTAR ↗</span>
+      </div>
+
+      <div class="scope-row" data-reveal onclick="selectServiceModalidade('05. Ambientação Fine Art & Fotorrealismo Híbrido')">
+        <span class="scope-num">05</span>
+        <div class="scope-info">
+          <h3 class="scope-name">Ambientação Fine Art &amp; Fotorrealismo Híbrido</h3>
+          <p class="scope-sub">Mockups em escala métrica real no eixo de 130cm para galerias e arquitetura, acervos visuais proprietários de ateliê sob pós-produção manual.</p>
         </div>
         <span class="scope-action micro mono">CONSULTAR ↗</span>
       </div>
@@ -2163,11 +2172,13 @@ html_document = f'''<!DOCTYPE html>
       <div class="brief-field">
         <label class="micro" for="modalidadeSelect">Modalidade de interesse</label>
         <select id="modalidadeSelect" class="brief-input">
-          <option value="01. Diagnóstico de Comunicação">01. Diagnóstico de Comunicação (Projeto único)</option>
-          <option value="02. Estratégia & Direção Criativa">02. Estratégia &amp; Direção Criativa (Projeto único)</option>
-          <option value="03. Conteúdo & Presença Digital">03. Conteúdo &amp; Presença Digital (Mensal)</option>
-          <option value="04. HYB Integrado" selected>04. HYB Integrado (Direção Completa Mensal)</option>
-          <option value="05. Aquisição de Obra / Acervo Autoral">05. Aquisição de Obra / Acervo Fine-Art</option>
+          <option value="01. Engenharia Digital & E-commerce Autoral" selected>01. Engenharia Digital &amp; E-commerce Autoral (Lojas &amp; Plataformas B2B)</option>
+          <option value="02. Branding & Sistemas de Identidade Visual">02. Branding &amp; Sistemas de Identidade Visual (DNA de Marca)</option>
+          <option value="03. Publishing Digital & Design Editorial">03. Publishing Digital &amp; Design Editorial (Revistas 9:16 &amp; Lookbooks)</option>
+          <option value="04. Conteúdo Revolver & Ghostwriting Executivo">04. Conteúdo Revolver &amp; Ghostwriting Executivo (Retainer &amp; Direção Integrada)</option>
+          <option value="05. Ambientação Fine Art & Fotorrealismo Híbrido">05. Ambientação Fine Art &amp; Fotorrealismo Híbrido (Escala 130cm)</option>
+          <option value="Diagnóstico de Posicionamento & Comunicação">Diagnóstico de Posicionamento &amp; Comunicação (Entrada)</option>
+          <option value="Aquisição de Obra / Acervo Autoral">Aquisição de Obra / Acervo Fine-Art</option>
         </select>
       </div>
       <div class="brief-field">
@@ -2184,12 +2195,13 @@ html_document = f'''<!DOCTYPE html>
   <!-- FOOTER (prototipo-editorial.html) -->
   <footer class="sec">
     <div class="foot micro">
-      <div>Escopos
+      <div>Escopos (5 Pilares)
         <ul>
-          <li><a href="#escopo-01">01 Diagnóstico de comunicação</a></li>
-          <li><a href="#escopo-02">02 Estratégia e direção criativa</a></li>
-          <li><a href="#escopo-03">03 Conteúdo e presença digital</a></li>
-          <li><a href="#escopo-04">04 HYB Integrado</a></li>
+          <li><a href="#escopos">01 Engenharia Digital &amp; E-commerce</a></li>
+          <li><a href="#escopos">02 Branding &amp; Sistemas de Marca</a></li>
+          <li><a href="#escopos">03 Publishing Digital &amp; Revistas 9:16</a></li>
+          <li><a href="#escopos">04 Conteúdo &amp; Ghostwriting</a></li>
+          <li><a href="#escopos">05 Ambientação Fine Art 130cm</a></li>
         </ul>
       </div>
       <div>Acervo (5 Atos)
