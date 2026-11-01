@@ -328,7 +328,7 @@ act_configs = [
         "code": "HYB // PUBLICAÇÃO OFICIAL (24 PÁGINAS)",
         "title": "Revista HYB — <em>Late Night Tales</em>",
         "subtitle": "Edição 001 integral com 24 páginas no leitor oficial de ateliê + download do PDF completo.",
-        "quote": "“A tela exige velocidade. O ateliê exige permanência. Subvertemos a proporção efêmera do digital em lâminas de coleção.”",
+        "quote": "“Publicação vertical pensada para a escala dos Stories e do iPad, com densidade editorial de revista impressa e retenção real de leitura.”",
         "source_path": "assets/revista_hyb/"
     },
     {
@@ -337,7 +337,7 @@ act_configs = [
         "code": "SHOES // 2.0",
         "title": "Caderno Shoes — <em>Escultura &amp; Gravidade</em>",
         "subtitle": "Do fetiche à matéria artesanal. Anatomia, couro moldado e salto estrutural.",
-        "quote": "“O calçado tratado não como acessório de vitrine, mas como engenharia de tensão, equilíbrio e escultura sobre o solo.”",
+        "quote": "“Modelagem, peso visual e equilíbrio: o desenho de calçado tratado como pesquisa escultórica e objeto autoral de design.”",
         "source_path": "assets/shoes/"
     },
     {
@@ -346,7 +346,7 @@ act_configs = [
         "code": "URBANO // LAMBE-LAMBE",
         "title": "Série Boys &amp; A Rua — <em>Lambe-Lambe</em>",
         "subtitle": "Cartazismo urbano, Pop Art contemporânea e tensão erótica/afeto.",
-        "quote": "“Quando a imagem sai da câmara escura e ganha a aspereza do muro: cola, papel rasgado, tipografia de choque e presença física.”",
+        "quote": "“Cartazismo urbano e colagem: a rua como suporte físico de experimentação tipográfica e intervenção direta no espaço público.”",
         "source_path": "assets/boys_lambe/"
     },
     {
@@ -355,7 +355,7 @@ act_configs = [
         "code": "MATÉRIA // ÓLEO & TELA",
         "title": "Acervo Matérico &amp; <em>Séries Autorais</em>",
         "subtitle": "A Dança, A Pista, impasto matérico, topografia do óleo e confrontos físicos com o linho.",
-        "quote": "“A máquina não conhece a resistência física do linho nem o peso da espátula. É no atrito da matéria que o olhar se prova.”",
+        "quote": "“Óleo, pigmento denso e espátula sobre linho cru: a matéria física da pintura sustentando a identidade visual do estúdio.”",
         "source_path": "assets/acervo_materico/"
     },
     {
@@ -364,7 +364,7 @@ act_configs = [
         "code": "HYB // SISTEMAS & CASES",
         "title": "HYB Studio &amp; <em>Cases Colecionáveis</em>",
         "subtitle": "Campanhas arquitetônicas, sistemas de formatos, curadoria Galeria Espectro e dossiês de repertório.",
-        "quote": "“Estratégia visual para marcas culturais, galerias e negócios autorais que recusam a estética descartável de linha de montagem.”",
+        "quote": "“Projetos de identidade, arquitetura brutalista e acervos contemporâneos estruturados para conferir autoridade e valor patrimonial a marcas independentes.”",
         "source_path": "assets/bureau/"
     }
 ]
@@ -469,7 +469,7 @@ def build_acts_html():
               <div class="magazine-card__inner">
                 <span class="micro mono micro--acc">EDIÇÃO INTEGRAL · 24 PÁGINAS HOMOLOGADAS</span>
                 <h4 class="magazine-card__title">Revista HYB — Edição 001 · <em>Late Night Tales</em></h4>
-                <p class="magazine-card__desc">A publicação completa reúne 24 pranchas originais integrando radiografia botânica, crônicas de ateliê, ensaios conceituais e cartazismo. Folheie a edição integral página por página no leitor interativo de ateliê ou baixe o PDF oficial.</p>
+                <p class="magazine-card__desc">Edição inaugural completa com 24 pranchas verticais reunindo radiografia botânica, ensaios visuais de moda, cartazes e crônicas autorais. Disponível para folhear no leitor de alta definição ou download em PDF.</p>
                 <div class="magazine-card__actions">
                   <button type="button" class="btn-editorial btn-editorial--acc" onclick="openMagazineReader(0)">▶ Folhear Edição Completa (24 Páginas)</button>
                   <a href="{hyb_pdf_url}" target="_blank" rel="noopener" class="btn-editorial">⬇ Baixar PDF Oficial (24 Pág.) ↗</a>
@@ -1974,17 +1974,17 @@ html_document = f'''<!DOCTYPE html>
       <span>Pensamento estratégico · Direção criativa · Conteúdo · Execução</span>
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <button type="button" class="btn-editorial btn-editorial--acc" onclick="openMagazineReader(0)">▶ Revista HYB (24 Pág.)</button>
-        <a href="#acervo" class="btn-editorial">Explorar Acervo ({total_all} Obras) ↓</a>
+        <a href="#lookbook" class="btn-editorial">Explorar Acervo ({total_all} Obras) ↓</a>
       </div>
-      <span class="mono">A máquina propõe. O humano autoriza.</span>
+      <span class="mono">Direção de arte, sistemas de marca e ateliê físico.</span>
     </div>
   </header>
 
-  <!-- 02. POSIÇÃO / MANIFESTO (prototipo-editorial.html) -->
+  <!-- 02. POSIÇÃO / MANIFESTO (CORTE GHOSTWRITER) -->
   <section class="sec manifesto g" id="posicao">
     <div class="manifesto__label micro" data-reveal><span class="mono micro--acc">02</span> — Posição</div>
-    <p class="manifesto__lead" data-reveal>Um estúdio criativo autoral (HYB) que combina pensamento estratégico, direção de arte com repertório plástico de ateliê e produção de conteúdo para negócios que recusam o genérico. A operação é híbrida por natureza: estratégia, criação, edição e execução acontecem no mesmo lugar, com clareza de processo e coerência entre conceito e entrega.</p>
-    <blockquote class="manifesto__quote" data-reveal>“A diferenciação não está no discurso: está no portfólio, na qualidade do raciocínio, na linguagem, na coerência entre conceito e execução e na clareza de processo.”</blockquote>
+    <p class="manifesto__lead" data-reveal>O HYB — STUDIO constrói identidade, publicações e plataformas digitais para marcas que dependem de autoridade estética e poder de preço. A operação concentra estratégia, desenho, código e acabamento no mesmo ateliê, sem repasse para intermediários nem soluções pasteurizadas de agência.</p>
+    <blockquote class="manifesto__quote" data-reveal>“Valor de marca não se sustenta em discurso. Sustenta-se no acabamento da peça, na densidade do repertório e na recusa absoluta ao formato genérico.”</blockquote>
   </section>
 
   <!-- 03. ESCOPOS (MATRIZ CANÔNICA DE 5 PILARES HYB STUDIO V2.2) -->
@@ -2041,18 +2041,18 @@ html_document = f'''<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- TRANSIÇÃO EDITORIAL: INFRAESTRUTURA & CURADORIA HUMANA -->
+  <!-- TRANSIÇÃO EDITORIAL: MÉTODO DE ATELIÊ & DISCIPLINA TÉCNICA -->
   <section class="sec transition-sec g" id="metodo">
     <div class="micro transition-kicker" data-reveal style="grid-column: 1 / span 3">
-      <span class="mono micro--acc">MÉTODO</span> — Ateliê Híbrido
+      <span class="mono micro--acc">MÉTODO</span> — Produção de Ateliê
     </div>
     <div class="transition-lead" data-reveal style="grid-column: 4 / span 8">
       <p class="note" style="margin: 0; font-size: clamp(17px, 1.8vw, 26px); line-height: 1.45;">
-        “A máquina propõe na velocidade da luz; a mão humana julga, corta e assina no tempo da matéria. Ferramentas digitais e inteligência artificial entram como infraestrutura de trabalho — nunca como substituto do repertório, da autoria ou do rigor estético.”
+        Modelos generativos e computação gráfica aceleram a pesquisa de referências e a infraestrutura técnica. A direção de arte, a tipografia, a cor e a decisão final sobre cada milímetro da tela pertencem à disciplina de 14 anos de ateliê físico.
       </p>
       <div class="micro" style="margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-        <span>5 Atos Editoriais · {total_all} Obras Catalogadas · Sem Intermediários</span>
-        <a href="#acervo" class="micro--acc">Explorar Acervo Curatorial ↓</a>
+        <span>5 Atos Editoriais · {total_all} Peças Homologadas · Autoria Direta</span>
+        <a href="#lookbook" class="micro--acc">Explorar Acervo Curatorial ↓</a>
       </div>
     </div>
   </section>
@@ -2073,7 +2073,7 @@ html_document = f'''<!DOCTYPE html>
         <div class="bento-content">
           <span class="micro mono bento-tag">ATO 01</span>
           <h3 class="bento-title">Revista HYB</h3>
-          <p class="bento-desc">Magazine editorial. Publicação impressa e digital.</p>
+          <p class="bento-desc">Edição 001. 24 páginas verticais nativas para Stories, iPad e impresso.</p>
           <span class="bento-link micro mono">↗ ACESSAR EDIÇÃO</span>
         </div>
       </div>
@@ -2085,7 +2085,7 @@ html_document = f'''<!DOCTYPE html>
         <div class="bento-content">
           <span class="micro mono bento-tag">ATO 02</span>
           <h3 class="bento-title">Design de Calçados Escultóricos</h3>
-          <p class="bento-desc">Forma, matéria e função como linguagem.</p>
+          <p class="bento-desc">Arquivo de anatomia, modelagem em couro e pesquisa escultórica.</p>
           <span class="bento-link micro mono">↗ EXPLORAR ATO</span>
         </div>
       </div>
@@ -2097,7 +2097,7 @@ html_document = f'''<!DOCTYPE html>
         <div class="bento-content">
           <span class="micro mono bento-tag">ATO 03</span>
           <h3 class="bento-title">Lambe-lambe Urbano</h3>
-          <p class="bento-desc">Intervenção gráfica. Rua como suporte.</p>
+          <p class="bento-desc">Cartazismo de grande formato, tipografia e colagem urbana.</p>
           <span class="bento-link micro mono">↗ EXPLORAR ATO</span>
         </div>
       </div>
@@ -2109,7 +2109,7 @@ html_document = f'''<!DOCTYPE html>
         <div class="bento-content">
           <span class="micro mono bento-tag">ATO 04</span>
           <h3 class="bento-title">Óleo sobre Linho Cru</h3>
-          <p class="bento-desc">Pintura. Gesto e pigmento como manifesto.</p>
+          <p class="bento-desc">Produção física de ateliê: óleo, linho cru e relevo matérico.</p>
           <span class="bento-link micro mono">↗ EXPLORAR ATO</span>
         </div>
       </div>
@@ -2121,7 +2121,7 @@ html_document = f'''<!DOCTYPE html>
         <div class="bento-content">
           <span class="micro mono bento-tag">ATO 05</span>
           <h3 class="bento-title">Cases Monolíticos Arquitetônicos</h3>
-          <p class="bento-desc">Estratégia e direção em escala de marca.</p>
+          <p class="bento-desc">Direção de arte para arquitetura, galerias e posicionamento de marca.</p>
           <span class="bento-link micro mono">↗ EXPLORAR ATO</span>
         </div>
       </div>
@@ -2158,7 +2158,7 @@ html_document = f'''<!DOCTYPE html>
       <a href="mailto:henrique992338736@gmail.com">Vamos falar</a>
     </h2>
     <div class="g" data-reveal style="margin-top:clamp(34px,8vh,96px)">
-      <p class="note" style="grid-column:1 / span 6;margin:0">Cada projeto é definido por escopo, prazo e faixas sob consulta. Conte o contexto, o momento da marca e o que precisa mudar.</p>
+      <p class="note" style="grid-column:1 / span 6;margin:0">Projetos estruturados sob escopo fechado, cronograma definido e faturamento unificado. Apresente o momento da sua marca para avaliarmos viabilidade e direcionamento.</p>
       <div class="micro" style="grid-column:9 / span 4">
         Novos projetos &amp; Consultoria<br>
         <span class="mono micro--fg">henrique992338736@gmail.com</span><br>
